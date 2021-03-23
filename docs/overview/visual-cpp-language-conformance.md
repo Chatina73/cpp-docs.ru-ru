@@ -1,19 +1,16 @@
 ---
-title: Таблица соответствия Microsoft Visual C++ стандартам языка
+title: Таблица соответствия языка и стандартной библиотеки Microsoft C++
 description: Таблица изменений соответствия Microsoft C++ в зависимости от версии Visual Studio.
-ms.date: 11/10/2020
+ms.date: 03/10/2021
 ms.technology: cpp-language
-ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-author: corob-msft
-ms.author: corob
-ms.openlocfilehash: 51e68563122d11634bddd7ed75658e5012d7f8e0
-ms.sourcegitcommit: beac3ddf1a20de5e836569ae07407d5f3703f536
+ms.openlocfilehash: d6a53a242d2803aa039c47666e9d45641978e59d
+ms.sourcegitcommit: f7d707e041dfb04e957af08098fdc38757adc8b0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99224491"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103472747"
 ---
-# <a name="microsoft-c-language-conformance-table"></a>Таблица соответствия Microsoft Visual C++ стандартам языка
+# <a name="microsoft-c-language-and-standard-library-conformance-table"></a>Таблица соответствия языка и стандартной библиотеки Microsoft C++
 
 Работа над соблюдением стандартов для компилятора Microsoft C++ в Visual Studio (MSVC) еще ведется. Ниже приведена сводка по соответствию языка C++ и библиотеки стандарту ISO по версиям Visual Studio. Каждое название функции компилятора и стандартной библиотеки является ссылкой на документ по C++ стандарта ISO, где находится ее описание (если функция доступна на момент публикации). В столбце **поддерживаемых** версий перечислены версии Visual Studio, в которых впервые появилась поддержка функции.
 
@@ -93,7 +90,7 @@ ms.locfileid: "99224491"
 | &nbsp;&nbsp;[`P1771R1 [[nodiscard]] for constructors`](https://wg21.link/p1771r1) | VS 2019 16.4<sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P1825R0 Merged wording for P0527R1 and P1155R3, more implicit moves`](https://wg21.link/p1825r0) | VS 2019 16.4<sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0929R2 Checking for abstract class types`](https://wg21.link/P0929R2) | VS 2019 16.5 <sup>[17](#note_17)</sup> |
-| &nbsp;&nbsp;[`P0962R2 Relaxing the range-for loop customization point finding rules`](https://wg21.link/p0962r1) | VS 2019 16.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[`P0962R1 Relaxing the range-for loop customization point finding rules`](https://wg21.link/p0962r1) | VS 2019 16.5 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0859R0 CWG 1581: When are constexpr member functions defined`](https://wg21.link/p0859r0) | Нет |
 | &nbsp;&nbsp;[`P1009R2 Array size deduction in new-expressions`](https://wg21.link/P1009R2) | VS 2019 16.7 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P1286R2 Contra CWG DR1778`](https://wg21.link/P1286R2) | VS 2019 16.8 <sup>[17](#note_17)</sup> |
@@ -170,17 +167,17 @@ ms.locfileid: "99224491"
 | &nbsp;&nbsp;[`P1811R0 Relaxing redefinition restrictions for re-exportation robustness`](https://wg21.link/P1811R0) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1874R1 Dynamic Initialization Order of Non-Local Variables in Modules`](https://wg21.link/P1874R1) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1975R0 Fixing the wording of parenthesized aggregate-initialization`](https://wg21.link/P1975R0) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0784R7 More constexpr containers`](https://wg21.link/P0784R7) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1141R2 Yet another approach for constrained declarations`](https://wg21.link/P1141R2) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1668R1 Permitting unevaluated inline assembly in constexpr functions`](https://wg21.link/P1668R1) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Partial |
-| &nbsp;&nbsp;[`P1141R2 Yet another approach for constrained declarations`](https://wg21.link/P1141R2) | Partial |
 | &nbsp;&nbsp;[`P0634R3 Down with typename!`](https://wg21.link/P0634R3) | Нет |
-| &nbsp;&nbsp;[`P0784R7 More constexpr containers`](https://wg21.link/P0784R7) | Нет |
 | &nbsp;&nbsp;[`P0840R2 [[no_unique_address]] attribute`](https://wg21.link/P0840R2) | Нет |
 | &nbsp;&nbsp;[`P1064R0 Allowing virtual function calls in constant expressions`](https://wg21.link/P1064R0) | Нет |
 | &nbsp;&nbsp;[`P1073R3 Immediate functions`](https://wg21.link/P1073R3) | Нет |
 | &nbsp;&nbsp;[`P1143R2 constinit`](https://wg21.link/P1143R2) | Нет |
 | &nbsp;&nbsp;[`P1327R1 Allowing dynamic_cast, polymorphic typeid in constant expressions`](https://wg21.link/P1327R1) | Нет |
 | &nbsp;&nbsp;[`P1353R0 Missing feature-test macros`](https://wg21.link/P1353R0) | Нет |
-| &nbsp;&nbsp;[`P1668R1 Permitting unevaluated inline assembly in constexpr functions`](https://wg21.link/P1668R1) | Нет |
 | &nbsp;&nbsp;[`P0735R1 Interaction of memory_order_consume with release sequences`](https://wg21.link/P0735R1) | Недоступно |
 | &nbsp;&nbsp;[`P1236R1 Signed integers are two's complement`](https://wg21.link/P1236R1) | Недоступно |
 
@@ -264,36 +261,36 @@ ms.locfileid: "99224491"
 | &nbsp;&nbsp;[`P2116R0 Remove tuple-like protocol support from fixed-extent span`](https://wg21.link/P2116R0) | VS 2019 16.7<sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0019R8 atomic_ref`](https://wg21.link/P0019R8) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0528R3 Library support for atomic compare-and-exchange with padding bits`](https://wg21.link/P0528R3) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P0811R3 midpoint(), lerp()`](https://wg21.link/P0811R3) | Частично в VS 2019 16.3, полностью в 16.8 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0811R3 midpoint(), lerp()`](https://wg21.link/P0811R3) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0912R5 Library Support For Coroutines`](https://wg21.link/P0912R5) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1001R2 execution::unseq`](https://wg21.link/P1001R2) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1032R1 Miscellaneous constexpr`](https://wg21.link/P1032R1) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1065R2 constexpr INVOKE`](https://wg21.link/P1065R2) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1123R0 Editorial Guidance for merging P0019r8 and P0528r3`](https://wg21.link/P1123R0) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P1135R6 The C++20 Synchronization Library`](https://wg21.link/P1135R6) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1960R0 NB Comment Changes Reviewed by SG1`](https://wg21.link/P1960R0) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0339R6 polymorphic_allocator<>`](https://wg21.link/P0339R6) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0660R10 <stop_token> and jthread`](https://wg21.link/p0660r10) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0768R1 Library Support For The Spaceship Comparison Operator <=>`](https://wg21.link/p0768r1) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1007R3 assume_aligned()`](https://wg21.link/P1007R3) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1020R1 Smart Pointer Creation With Default Initialization`](https://wg21.link/P1020R1) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1135R6 The C++20 Synchronization Library`](https://wg21.link/P1135R6) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1771R1 Library support for [[nodiscard]] for constructors`](https://wg21.link/P1771R1) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0053R7 <syncstream>`](https://wg21.link/p0053r7)<br/>&nbsp;&nbsp;[`P0753R2 osyncstream Manipulators`](https://wg21.link/p0753r2) | Нет |
-| &nbsp;&nbsp;[`P0339R6 polymorphic_allocator<>`](https://wg21.link/P0339R6) | Нет |
-| &nbsp;&nbsp;[`P0355R7 <chrono> Calendars And Time Zones`](https://wg21.link/p0355r7) | Нет |
+| &nbsp;&nbsp;[`P0355R7 <chrono> Calendars And Time Zones`](https://wg21.link/p0355r7) | Частично в VS 2019 16.9 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0408R7 Efficient access To basic_stringbuf's buffer`](https://wg21.link/p0408r7) | Нет |
 | &nbsp;&nbsp;[`P0466R5 Library support for layout-compatibility and pointer-interconvertibility traits`](https://wg21.link/p0466r5) | Нет |
 | &nbsp;&nbsp;[`P0475R1 Guaranteed Copy Elision For Piecewise Construction`](https://wg21.link/P0475R1) | Нет |
 | &nbsp;&nbsp;[`P0591R4 Utility Functions For Uses-Allocator Construction`](https://wg21.link/P0591R4) | Нет |
 | &nbsp;&nbsp;[`P0608R3 Improving variant's Converting Constructor/Assignment`](https://wg21.link/P0608R3) | Нет |
-| &nbsp;&nbsp;[`P0645R10 <format> Text Formatting`](https://wg21.link/p0645r10) | Нет |
-| &nbsp;&nbsp;[`P0660R10 <stop_token> and jthread`](https://wg21.link/p0660r10) | Нет |
-| &nbsp;&nbsp;[`P0768R1 Library Support For The Spaceship Comparison Operator <=>`](https://wg21.link/p0768r1) | Частично в VS 2019 16.0 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0645R10 <format> Text Formatting`](https://wg21.link/p0645r10) | нет |
 | &nbsp;&nbsp;[`P0784R7 Library support for more constexpr containers`](https://wg21.link/P0784R7) | Частично в VS 2019 16.7 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0896R4 <ranges>`](https://wg21.link/P0896R4) | Частично в VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0980R1 constexpr std::string`](https://wg21.link/P0980R1) | Нет |
 | &nbsp;&nbsp;[`P1004R2 constexpr std::vector`](https://wg21.link/P1004R2) | Нет |
-| &nbsp;&nbsp;[`P1007R3 assume_aligned()`](https://wg21.link/P1007R3) | Нет |
-| &nbsp;&nbsp;[`P1020R1 Smart Pointer Creation With Default Initialization`](https://wg21.link/P1020R1) | Нет |
 | &nbsp;&nbsp;[`P1208R6 <source_location>`](https://wg21.link/P1208R6) | Нет |
 | &nbsp;&nbsp;[`P1285R0 Improving Completeness Requirements For Type Traits`](https://wg21.link/P1285R0) | Недоступно |
-| &nbsp;&nbsp;[`P1502R1 Standard Library Header Units`](https://wg21.link/P1502R1) | Нет |
+| &nbsp;&nbsp;[`P1502R1 Standard Library Header Units`](https://wg21.link/P1502R1) | Частично в VS 2019 16.9 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1614R2 Adding Spaceship <=> To The Library`](https://wg21.link/P1614R2) | Частично в VS 2019 16.7 <sup>[20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P1771R1 Library support for [[nodiscard]] for constructors`](https://wg21.link/P1771R1) | Нет |
 | __Функции стандартной библиотеки C++17__ | __Поддерживается__ |
 | &nbsp;&nbsp;[`LWG 2221 Formatted output operator for nullptr`](https://cplusplus.github.io/LWG/issue2221) | VS 2019 16.1 |
 | &nbsp;&nbsp;[`N3911 void_t`](https://wg21.link/n3911) | VS 2015 <sup>[14](#note_14)</sup> |
@@ -426,7 +423,8 @@ __VS 2019 16.4__ — функции, которые поддерживаютс�
 __VS 2019 16.5__ — функции, которые поддерживаются в Visual Studio 2019 версии 16.5.\
 __VS 2019 16.6__ — функции, которые поддерживаются в Visual Studio 2019 версии 16.6.\
 __VS 2019 16.7__ — функции, которые поддерживаются в Visual Studio 2019 версии 16.7.\
-__VS 2019 16.8__ — функции, которые поддерживаются в Visual Studio 2019 версии 16.8.
+__VS 2019 16.8__ — функции, которые поддерживаются в Visual Studio 2019 версии 16.8.\
+__VS 2019 16.9__ — функции, которые поддерживаются в Visual Studio 2019 версии 16.9.
 
 ### <a name="notes"></a>Примечания
 
@@ -444,7 +442,7 @@ __VS 2019 16.8__ — функции, которые поддерживают�
 
 <a name="note_G"></a>__G__ Поддерживается встроенными функциями компилятора.
 
-<a name="note_14"></a>__14__ Эти функции C++17/20 всегда включены, даже если указано значение по умолчанию [`/std:c++14`](../build/reference/std-specify-language-standard-version.md). Это происходит, потому что функция реализована до введения параметров **/std** или из-за сложных условий реализации.
+<a name="note_14"></a>__14__ Эти функции C++17/20 всегда включены, даже если указано значение по умолчанию [`/std:c++14`](../build/reference/std-specify-language-standard-version.md). Это происходит, потому что функция реализована до введения параметров **`/std`** или из-за сложных условий реализации.
 
 <a name="note_17"></a> __17__ Эти функции реализуются с помощью параметра компилятора [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (или [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)).
 
@@ -454,7 +452,7 @@ __VS 2019 16.8__ — функции, которые поддерживают�
 
 <a name="note_byte"></a> __byte__ `std::byte` поддерживают [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (или [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)), но так как в некоторых случаях эта версия может конфликтовать с заголовками Windows SDK, предусмотрен детально настроенный макрос явного отказа. Его можно отключить, определив `_HAS_STD_BYTE` как `0`.
 
-<a name="note_C11"></a> __C11__ Для поддержки C11 компилятором требуется Visual Studio версии 16.8 или выше. Для поддержки библиотеки C11 требуется Windows SDK версии 20211 или выше. В Universal CRT реализованы части стандартной библиотеки C99, необходимые для C++17, за исключением альтернативных спецификаторов преобразования E и O C11 `strftime()`и C11 `aligned_alloc()`. Маловероятно, что последний компонент будет реализован, так как операционная система Windows не поддерживает выровненные распределения.
+<a name="note_C11"></a> __C11__ Для поддержки C11 компилятором требуется Visual Studio версии 16.8 или выше. Для поддержки библиотеки C11 требуется Windows SDK версии 20211 или выше. В Universal CRT реализованы части стандартной библиотеки C11, необходимые для C++17, за исключением альтернативных спецификаторов преобразования E и O C99 `strftime()`и C11 `aligned_alloc()`. Маловероятно, что последний компонент будет реализован, так как операционная система Windows не поддерживает выровненные распределения.
 
 <a name="note_rem"></a> __rem__ Функции, которые удаляются, если указан параметр компилятора [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (или [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)). Эти функции можно будет снова включить для упрощения перехода к новым языковым режимам с помощью таких макросов: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` и `_HAS_UNEXPECTED`.
 
