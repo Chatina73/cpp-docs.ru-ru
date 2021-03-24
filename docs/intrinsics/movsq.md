@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 5bd212e5ebd1b98a853fb782d7e45c1e7e001f44
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8b1713cc17353640904b6593149a73ebce52475d
+ms.sourcegitcommit: 977b5151e7dae7584112328bab515fb15622a6cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97133163"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104883874"
 ---
 # <a name="__movsq"></a>__movsq
 
@@ -26,8 +26,8 @@ ms.locfileid: "97133163"
 
 ```C
 void __movsq(
-   unsigned char* Destination,
-   unsigned char* Source,
+   unsigned long long* Destination,
+   unsigned long long const* Source,
    size_t Count
 );
 ```
@@ -45,13 +45,13 @@ void __movsq(
 
 ## <a name="requirements"></a>Требования
 
-|Intrinsic|Архитектура|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__movsq`|X64|
 
 **Файл заголовка** \<intrin.h>
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
 В результате первый *Счетчик* куадвордс, на который указывает *источник* , копируется в *целевую* строку.
 

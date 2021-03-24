@@ -40,12 +40,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 8fb6679e2b509274b4ea60c410a81b54df866416
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0e05cd243c88f9f3862f6acaa517bee8e7b0bdb8
+ms.sourcegitcommit: 977b5151e7dae7584112328bab515fb15622a6cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505572"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104883900"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -86,7 +86,7 @@ long double pow( long double x, int y );  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-**Pow** не распознает целочисленные значения с плавающей запятой больше 2<sup>64</sup> (например, 1.0 E100).
+**Pow** не распознает целочисленные значения с плавающей запятой больше 2 <sup>64</sup> (например, 1.0 E100).
 
 **Pow** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
@@ -95,6 +95,8 @@ long double pow( long double x, int y );  // C++ only
 При использовании \<tgmath.h> `pow()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 Перегрузка `pow(int, int)` более не доступна. При использовании этой перегрузки компилятор может выдать [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Чтобы избежать этой проблемы, приведите первый параметр к **`double`** , **`float`** или **`long double`** .
+
+Первоначально `pow(T, int)` перегрузки будут располагали `pow` вызов в последовательность встроенных операций умножения. Хотя это было быстрее, оно было также значительно менее точным и было удалено в Visual Studio 2015 с обновлением 1. Дополнительные сведения см. [в статье улучшения соответствия в Visual Studio 2015 с обновлением 1](../../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -131,7 +133,7 @@ int main( void )
 ## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md) <br/>
-[exp, expf, expl](exp-expf.md) <br/>
-[log, logf, log10, log10f](log-logf-log10-log10f.md) <br/>
-[sqrt, sqrtf, sqrtl](sqrt-sqrtf-sqrtl.md) <br/>
-[_CIpow](../../c-runtime-library/cipow.md)<br/>
+[`exp`, `expf`, `expl`](exp-expf.md) <br/>
+[`log`, `logf`, `log10`, `log10f`](log-logf-log10-log10f.md) <br/>
+[`sqrt`, `sqrtf`, `sqrtl`](sqrt-sqrtf-sqrtl.md) <br/>
+[`_CIpow`](../../c-runtime-library/cipow.md)<br/>
