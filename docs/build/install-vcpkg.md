@@ -4,12 +4,12 @@ description: Сведения об установке и обновлении vc
 ms.date: 12/17/2020
 ms.topic: reference
 ms.technology: cpp-ide
-ms.openlocfilehash: aee9561dc94164c08e4d69ec49f60961392c1854
-ms.sourcegitcommit: 2b2c3fa9244e31db35ea33554dea0efcab490f3c
+ms.openlocfilehash: b508134693d5687898f0e5202f54ee35b91680bb
+ms.sourcegitcommit: 977b5151e7dae7584112328bab515fb15622a6cc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684134"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104883861"
 ---
 # <a name="install-vcpkg-on-windows-linux-and-macos"></a>Установка vcpkg в Windows, Linux и macOS
 
@@ -160,5 +160,5 @@ ms.locfileid: "97684134"
 [Интеграция vcpkg](integrate-vcpkg.md)\
 [Управление библиотеками с помощью vcpkg](manage-libraries-with-vcpkg.md)\
 [Справочник по командной строке vcpkg](vcpkg-command-line-reference.md)\
-[Краткое руководство](https://github.com/microsoft/vcpkg/blob/master/docs/index.md)\
+[Краткое руководство](https://github.com/microsoft/vcpkg/blob/master/docs/README.md)\
 [Часто задаваемые вопросы по Аналитике компьютеров](https://github.com/microsoft/vcpkg/blob/master/docs/about/faq.md)
