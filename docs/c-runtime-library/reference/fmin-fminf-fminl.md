@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: 6a070835d809c6adcb5b7bfd57b5373886b348ca
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 007eae82ca60796d7a81b34e6419d21585c708d0
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556714"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099720"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -92,11 +92,11 @@ long double fminl(
 |-----------|------------|
 |*x* является NaN|*y*|
 |*y* — NaN|*x*|
-|*x* и *y* — это NaN|NaN|
+|*x* и *y* — это NaN|не число|
 
 Функция не вызывает [_matherr](matherr.md) вызываться, приводит к исключениям с плавающей запятой или изменению **значения параметра «значение».**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **фмин** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **фмин** всегда принимает и возвращает **`double`** .
 
@@ -107,11 +107,11 @@ long double fminl(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**фмин**, **фминф**, **фминл**|Ц \<math.h><br />C++: \<math.h> или \<cmath>|
-|макрос **фмин** | \<tgmath.h> ||
+|макрос **фмин** | \<tgmath.h> |
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Дополнительно
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>

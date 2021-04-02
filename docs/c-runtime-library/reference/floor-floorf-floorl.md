@@ -36,12 +36,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 6af047d3da891270ab6a596dfc3ebef0941a91cf
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: f2fa789d780b624ab0e680afa0631793d7eed162
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556740"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099566"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -83,7 +83,7 @@ long double floorl(
 
 у **этажа** есть реализация, использующая Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 C++ допускает перегрузку, поэтому можно вызывать перегрузки **Floor** , которые принимают и возвращают **`float`** **`long double`** значения и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **Floor** всегда принимает и возвращает **`double`** .
 
@@ -96,7 +96,7 @@ C++ допускает перегрузку, поэтому можно вызы�
 |Функция|Обязательный заголовок|
 |--------------|---------------------|
 |**Floor**, **флурф**, **этаж**|\<math.h>|
-|макрос **Floor** | \<tgmath.h> ||
+|макрос **Floor** | \<tgmath.h> |
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -135,7 +135,7 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

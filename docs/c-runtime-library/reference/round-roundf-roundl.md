@@ -35,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 2e51eb375ab814119dcf34d85c7f5aff11559784
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e677f372c87446c66e3404419220527a24de63ea
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499180"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099733"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -80,7 +80,7 @@ long double roundl(
 |-----------|-------------------|-----------------------|
 |± **КНАН**, **с**|нет|**_DOMAIN**|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Round** , которые принимают и возвращают **`float`** **`long double`** значения и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, функция **Round** всегда принимает и возвращает **`double`** .
 
@@ -93,7 +93,7 @@ long double roundl(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**Round**, **раундф**, **Round**|\<math.h>|
-|**круглый** макрос | \<tgmath.h> ||
+|**круглый** макрос | \<tgmath.h> |
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

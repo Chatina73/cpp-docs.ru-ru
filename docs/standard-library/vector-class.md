@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::vector [C++], shrink_to_fit
 - std::vector [C++], size
 - std::vector [C++], swap
-ms.openlocfilehash: c1132b0b8f975cbe0185720c46316446db0506d5
-ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
+ms.openlocfilehash: bcc6049c5b1040ea2bf3772a851ed26d40a4c608
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102236781"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099291"
 ---
 # <a name="vector-class"></a>Класс `vector`
 
@@ -120,19 +120,19 @@ class vector
 
 [ `vector<bool>` Класс](../standard-library/vector-bool-class.md) является полной специализацией вектора шаблона класса для элементов типа **`bool`** . Он имеет распределитель для базового типа, используемого специализацией.
 
-[ `vector<bool>` Ссылочный класс](../standard-library/vector-bool-class.md#reference_class) — это вложенный класс, объекты которого могут предоставлять ссылки на элементы (одиночные биты) в \<bool> объекте Vector.
+[ `vector<bool>` Ссылочный класс](../standard-library/vector-bool-class.md#reference_class) — это вложенный класс, объекты которого могут предоставлять ссылки на элементы (одиночные биты) внутри `vector<bool>` объекта.
 
 ## <a name="members"></a>Члены
 
 ### <a name="constructors"></a>Конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |-|-|
 |[`vector`](#vector)|Создает вектор определенного размера, вектор с элементами определенного значения, вектор с определенным `allocator`, или вектор как копию какого-либо другого вектора.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |-|-|
 |`[allocator_type]`(#allocator_type)|Тип, представляющий класс `allocator` для объекта вектора.|
 |[`const_iterator`](#const_iterator)|Тип, предоставляющий итератор произвольного доступа, который может считывать **`const`** элемент в векторе.|
@@ -149,7 +149,7 @@ class vector
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание:|
+|Имя|Описание|
 |-|-|
 |[`assign`](#assign)|Удаляет вектор и копирует указанные элементы в пустой вектор.|
 |[`at`](#at)|Возвращает ссылку на элемент в заданном положении в векторе.|
@@ -183,7 +183,7 @@ class vector
 
 ### <a name="operators"></a>Операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |-|-|
 |[`operator[]`](#op_at)|Возвращает ссылку на элемент вектора в указанной позиции.|
 |[`operator=`](#op_eq)|Заменяет элементы вектора копией другого вектора.|

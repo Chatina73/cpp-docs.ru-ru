@@ -7,14 +7,14 @@ helpviewer_keywords:
 - operator>>, overloading for your own classes
 - operator >>, overloading for your own classes
 ms.assetid: 40dab4e0-3f97-4745-9cc8-b86e740fa246
-ms.openlocfilehash: 4de7c16dd1c42f85f169da50f11a514eb245b47c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d1b89c94a87e94a5bab255ffafb2b049bad4356d
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97340857"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099486"
 ---
-# <a name="overloading-the-gtgt-operator-for-your-own-classes"></a>Перегрузка оператора &gt;&gt; для собственных классов
+# <a name="overloading-the--operator-for-your-own-classes"></a>Перегрузка оператора `>>` для собственных классов
 
 Потоки ввода используют оператор извлечения (`>>`) для стандартных типов. Можно написать аналогичные операторы извлечения для собственных типов; успех зависит от правильности использования пустого пространства.
 

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 25cc206c6990e3dbe75c0a3b703766ab0c0e34ce
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: ad17dbb7494d38958fc8864b482876ad1efe6cc8
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324765"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099694"
 ---
 # <a name="c-standard-library-overview"></a>Общие сведения о стандартной библиотеке C++
 
-Все сущности библиотеки C++ объявляются или определяются в одном или нескольких стандартных заголовках. Эта реализация включает два дополнительных заголовка, \<hash_map> и \<hash_set>, которые не требуются по стандарту C++. Полный список заголовков, поддерживаемых этой реализацией, см. в разделе [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md).
+Все сущности библиотеки C++ объявляются или определяются в одном или нескольких стандартных заголовках. Эта реализация включает два дополнительных заголовка, `<hash_map>` и `<hash_set>`, которые не требуются по стандарту C++. Полный список заголовков, поддерживаемых этой реализацией, см. в разделе [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md).
 
 Автономная реализация библиотеки С++ предоставляет только подмножество этих заголовков:
 
-[\<cstdarg>](../standard-library/cstdarg.md)\
-[\<cstddef>](../standard-library/cstddef.md)\
-[\<cstdlib>](../standard-library/cstdlib.md) (объявление по крайней мере функций `abort` , `atexit` и `exit` ) \
-[\<exception>](../standard-library/exception.md)\
-[\<limits>](../standard-library/limits.md)\
-[\<new>](../standard-library/new.md)
+[`<cstdarg>`](../standard-library/cstdarg.md)\
+[`<cstddef>`](../standard-library/cstddef.md)\
+[`<cstdlib>`](../standard-library/cstdlib.md) (объявление по крайней мере функций `abort` , `atexit` и `exit` ) \
+[`<exception>`](../standard-library/exception.md)\
+[`<limits>`](../standard-library/limits.md)\
+[`<new>`](../standard-library/new.md)
 
 Заголовки библиотек C++ имеют два широких подраздела:
 

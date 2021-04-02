@@ -14,12 +14,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: 8dc81692c7c7dc467f3ab8e2ceb8cac19e004ab8
-ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
+ms.openlocfilehash: 4af9e0a5d5f2839de564f25c976e018e8f1565e7
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98667474"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099356"
 ---
 # `filesystem`
 
@@ -34,8 +34,8 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> В выпуске Visual Studio 2017 \<filesystem> заголовок еще не является стандартом C++. C++ в Visual Studio 2017 RTW реализует окончательный черновой стандарт, который находится в [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100). Visual Studio 2017 версии 15,7 и более поздних версий поддерживает новый \<filesystem> стандарт c++ 17.
-> Это совершенно новая реализация, несовместимая с предыдущей `std::experimental` версией. Она была необходима для поддержки символьную ссылку, исправления ошибок и изменений в стандартном поведении. В настоящее время, включая, \<filesystem> предоставляет новый `std::filesystem` и предыдущий `std::experimental::filesystem` . Включает \<experimental/filesystem> в себя только старую experimental реализацию. experimentalРеализация будет удалена в следующем выпуске библиотек ABI-Break.
+> В выпуске Visual Studio 2017 `<filesystem>` заголовок еще не является стандартом C++. C++ в Visual Studio 2017 RTW реализует окончательный черновой стандарт, который находится в [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100). Visual Studio 2017 версии 15,7 и более поздних версий поддерживает новый `<filesystem>` стандарт c++ 17.
+> Это совершенно новая реализация, несовместимая с предыдущей `std::experimental` версией. Она была необходима для поддержки символьную ссылку, исправления ошибок и изменений в стандартном поведении. В настоящее время, включая, `<filesystem>` предоставляет новый `std::filesystem` и предыдущий `std::experimental::filesystem` . Включает `<experimental/filesystem>` в себя только старую experimental реализацию. experimentalРеализация будет удалена в следующем выпуске библиотек ABI-Break.
 
 Этот заголовок поддерживает файловые системы для одного из двух основных классов операционных систем размещения: Microsoft Windows и POSIX.
 
@@ -91,7 +91,7 @@ using namespace std::experimental::filesystem::v1;
 
 Незначительное различие — это предпочтительный разделитель между последовательностью каталогов в пути. Обе операционные системы позволяют написать прямую косую черту `/` , но в некоторых контекстах Windows предпочитает обратную косую черту `\` . Реализация сохраняет свой предпочтительный разделитель в элементе данных `preferred_separator` в `path` .
 
-Наконец, `path` объекты имеют важную возможность: их можно использовать везде, где требуется аргумент filename в классах, определенных в заголовке [\<fstream>](fstream.md) .
+Наконец, `path` объекты имеют важную возможность: их можно использовать везде, где требуется аргумент filename в классах, определенных в заголовке [`<fstream>`](fstream.md) .
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 
@@ -101,12 +101,12 @@ using namespace std::experimental::filesystem::v1;
 
 |name|Описание|
 |-|-|
-|[`directory_entry` см](../standard-library/directory-entry-class.md)|Описывает объект, возвращаемый `directory_iterator` или, `recursive_directory_iterator` и содержит `path` .|
-|[`directory_iterator` см](../standard-library/directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы.|
-|[`filesystem_error` см](../standard-library/filesystem-error-class.md)|Базовый класс для исключений, создаваемых для отчета о переполнении системы низкого уровня.|
-|[`path` см](../standard-library/path-class.md)|Определяет класс, который хранит объект типа шаблона `String` , пригодный для использования в качестве имени файла.|
-|[`recursive_directory_iterator` см](../standard-library/recursive-directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы. Итератор может также просматривать подкаталоги.|
-|[`file_status` см](../standard-library/file-status-class.md)|Создает оболочку для `file_type`.|
+|[Класс `directory_entry`](../standard-library/directory-entry-class.md)|Описывает объект, возвращаемый `directory_iterator` или, `recursive_directory_iterator` и содержит `path` .|
+|[Класс `directory_iterator`](../standard-library/directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы.|
+|[Класс `filesystem_error`](../standard-library/filesystem-error-class.md)|Базовый класс для исключений, создаваемых для отчета о переполнении системы низкого уровня.|
+|[Класс `path`](../standard-library/path-class.md)|Определяет класс, который хранит объект типа шаблона `String` , пригодный для использования в качестве имени файла.|
+|[Класс `recursive_directory_iterator`](../standard-library/recursive-directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы. Итератор может также просматривать подкаталоги.|
+|[Класс `file_status`](../standard-library/file-status-class.md)|Создает оболочку для `file_type`.|
 
 ### <a name="structs"></a>Структуры
 
@@ -116,11 +116,11 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="functions"></a>Функции
 
-[\<filesystem> функции](../standard-library/filesystem-functions.md)
+[Функции `<filesystem>`](../standard-library/filesystem-functions.md)
 
 ## <a name="operators"></a>Операторы
 
-[\<filesystem> операторы](../standard-library/filesystem-operators.md)
+[`<filesystem>` операторы](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>Перечисления
 

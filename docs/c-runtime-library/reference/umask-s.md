@@ -33,12 +33,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-ms.openlocfilehash: 2a6877b656b17f38dfdf09419da5b64115575a9a
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8a87d924073d5e13d8c5ce0377276cf10a9e0798
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97239939"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099317"
 ---
 # <a name="_umask_s"></a>_umask_s
 
@@ -80,7 +80,7 @@ errno_t _umask_s(
 
 Целочисленное выражение *пмоде* содержит одну или обе следующие константы манифеста, определенные в сис\стат. Высоты
 
-|*пмоде*||
+|*пмоде*|Описание|
 |-|-|
 |**_S_IWRITE**|Разрешена запись.|
 |**_S_IREAD**|Разрешено чтение.|

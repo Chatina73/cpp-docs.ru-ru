@@ -47,12 +47,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: c5db62da7cdba58fdc58e8acbfe3aff0e2c386d6
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: ab0663acc0d1fd5bf2110993114ce9bd8f67f55e
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555323"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099575"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -107,7 +107,7 @@ long long llroundl(
 |-----------|-------------------|-----------------------|
 |± **КНАН**, **с**|нет|**_DOMAIN**|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лраунд** или **ллраунд** , которые принимают и возвращают **`float`** **`long double`** значения и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **лраунд** и **ллраунд** всегда принимают и возвращают **`double`** .
 
@@ -120,7 +120,7 @@ long long llroundl(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**лраунд**, **лраундф**, **лраундл**, **ллраунд**, **ллраундф**, **ллраундл**|\<math.h>|
-|макрос **лраунд** | \<tgmath.h> ||
+|макрос **лраунд** | \<tgmath.h> |
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -160,7 +160,7 @@ lroundl(3.500000) is 4
 lroundl(-3.500000) is -4
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
