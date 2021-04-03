@@ -51,12 +51,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 93b1e9d3998a3ad29d45e2b1c197807bf61e4176
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 45a1e5f1a0ab57048d2a40da0f976b5ff7c8d653
+ms.sourcegitcommit: be9a1af0b9d3f1d6c2987d8744392170b8dccab0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97262845"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106232339"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Неустранимые ошибки компилятора с C999 по C1999
 
@@ -134,7 +134,7 @@ ms.locfileid: "97262845"
 |[Неустранимая ошибка C1087](fatal-error-c1087.md)|не удается определить файл *type* : "*file*": *message*|
 |[Неустранимая ошибка C1088](fatal-error-c1088.md)|не удается очистить файл *type* : "*file*": *message*|
 |[Неустранимая ошибка C1089](fatal-error-c1089.md)|не удается сократить файл *type* : "*file*": *message*|
-|Неустранимая ошибка C1090|Сбой при обращении к PDB API, код ошибки "*code*": "*message*"|
+|[Неустранимая ошибка C1090](fatal-error-c1090.md)|Сбой при обращении к PDB API, код ошибки "*code*": "*message*"|
 |[Неустранимая ошибка C1091](fatal-error-c1091.md)|ограничение компилятора: длина строки превышает *number* байт|
 |[Неустранимая ошибка C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)|Режим "Изменить и продолжить" не поддерживает изменения типов данных; требуется сборка|
 |[Неустранимая ошибка C1093](../../error-messages/compiler-errors-1/fatal-error-c1093.md)|Сбой вызова API "*function*" "*HRESULT*": "*description*"|
@@ -152,7 +152,7 @@ ms.locfileid: "97262845"
 |[Неустранимая ошибка C1109](fatal-error-c1109.md)|не удается найти "*symbol*" в DLL "*file*"|
 |Неустранимая ошибка C1110|слишком много вложенных или универсальных определений|
 |Неустранимая ошибка C1111|слишком много вложенных или универсальных параметров|
-|Неустранимая ошибка C1112|ограничение компилятора: `'number` слишком много аргументов макроса; разрешено только *число*|
+|Неустранимая ошибка C1112|ограничение компилятора: "*число*" слишком много аргументов макроса; разрешено только *число*|
 |[Неустранимая ошибка C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|сбой #using для "*file*"|
 |Неустранимая ошибка C1114|"*file*": среда выполнения Windows не поддерживает директиву #using для управляемой сборки|
 |[Неустранимая ошибка C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|сбой при вызове GetProcAddress для "*function*"|
