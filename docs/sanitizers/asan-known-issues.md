@@ -1,17 +1,17 @@
 ---
-title: Известные проблемы Аддресссанитизер
+title: Известные проблемы AddressSanitizer
 description: Техническое описание известных проблем с Аддресссанитизер для Microsoft C/C++.
 ms.date: 03/02/2021
 helpviewer_keywords:
 - AddressSanitizer known issues
-ms.openlocfilehash: 7db8b06a96eababbd6a48e337cff7155f248fb34
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: 0bd8b8cc05265930b8ade514c4d1f8ea162bb304
+ms.sourcegitcommit: dc77cf3b5b644d8e2adf595540b98194ab95c6e1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102471186"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106377233"
 ---
-# <a name="addresssanitizer-known-issues"></a>Известные проблемы Аддресссанитизер
+# <a name="addresssanitizer-known-issues"></a>Известные проблемы AddressSanitizer
 
 > [!NOTE]
 > Отправьте нам [отзыв](https://aka.ms/vsfeedback/browsecpp) о том, что вы хотели бы увидеть в будущих выпусках, и [сообщите об ошибках](https://aka.ms/feedback/report?space=62) при возникновении проблем.
@@ -67,7 +67,13 @@ int main() {
 
 *`clang_rt.asan*.dll`* Файлы среды выполнения устанавливаются рядом с компиляторами в *`%VSINSTALLDIR%\VC\Tools\MSVC\<version>\bin\<host-arch>\<target-arch>\`* . Эти расположения находятся в пути в сеансах отладки, а также в командных запросах разработчика Visual Studio. Эти файлы никогда не помещаются в *`C:\Windows\System32`* или *`C:\Windows\SysWOW64`* .
 
-## <a name="see-also"></a>См. также раздел
+## <a name="custom-property-sheet-support"></a>Поддержка настраиваемой вкладки свойств
+
+Окно диспетчер свойств в интегрированной среде разработки Visual Studio позволяет добавлять *`.props`* в проекты пользовательские файлы. Несмотря на то, что отображается свойство « **Включение очистки адреса** `<EnableASAN>` » (), оно не учитывается в сборке. Это обусловлено тем, что пользовательские *`.props`* файлы включаются после *`Microsoft.cpp.props`* , что использует `<EnableASAN>` значение для задания других свойств.
+
+В качестве обходного решения можно создать *`Directory.Build.props`* файл в корне проекта, чтобы определить `<EnableASAN>` свойство. Дополнительные сведения см. в разделе [Настройка сборок C++](/visualstudio/msbuild/customize-your-build#customize-c-builds).
+
+## <a name="see-also"></a>См. также
 
 [Обзор Аддресссанитизер](./asan.md)\
 [Справочник по сборке и языку Аддресссанитизер](./asan-building.md)\
@@ -75,4 +81,4 @@ int main() {
 [Аддресссанитизер теневых байт](./asan-shadow-bytes.md)\
 [Аддресссанитизер облачное или распределенное тестирование](./asan-offline-crash-dumps.md)\
 [Интеграция отладчика Аддресссанитизер](./asan-debugger-integration.md)\
-[Примеры ошибок Аддресссанитизер](./asan-error-examples.md)
+[Примеры ошибок в AddressSanitizer](./asan-error-examples.md)
