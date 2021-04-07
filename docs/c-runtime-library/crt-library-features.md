@@ -1,8 +1,9 @@
 ---
-title: LIB-файлы среды выполнения C (CRT) и стандартной библиотеки C++
+title: LIB-файлы стандартной библиотеки C++ и среды выполнения C (CRT)
 description: Список файлов среды выполнения Microsoft C и библиотеки стандартных библиотек C++. lib, которые можно связать с соответствующими параметрами компилятора и директивами препроцессора.
 ms.date: 3/5/2021
 ms.topic: reference
+ms.custom: contperf-fy21q3
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++]
 - libraries [C++], run-time
 - linking [C++], libraries
-ms.openlocfilehash: dab3d767865b91f8a8e567488698a197c35c9b74
-ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
+ms.openlocfilehash: e1af94143ecf8aa2705c79f9f5c0c6a6890007f4
+ms.sourcegitcommit: a89eac9acdbd54a181e3bd5d5bc71a3ef3c1abca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102514698"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106506108"
 ---
 # <a name="c-runtime-crt-and-c-standard-library-stl-lib-files"></a>Файлы среды выполнения C (CRT) и библиотеки стандартных библиотек C++ (STL) `.lib`
 
@@ -99,7 +100,7 @@ ms.locfileid: "102514698"
 | *`libcpmtd.lib`* | Многопоточная, статическая компоновка. | **`/MTd`** | `_DEBUG`, `_MT` |
 | *`msvcprtd.lib`* | Многопоточная, динамическая компоновка (импорт библиотеки для *`msvcp<version>d.dll`* ) | **`/MDd`** | `_DEBUG`, `_MT`, `_DLL` |
 
-При создании окончательной версии проекта одна из основных библиотек среды выполнения C ( *`libcmt.lib`* , *`msvcmrt.lib`* , *`msvcrt.lib`* ) по умолчанию связана в зависимости от выбранного параметра компилятора (многопоточная, DLL **`/clr`** ). Если включить в код один из [файлов заголовков стандартной библиотеки c++](../standard-library/cpp-standard-library-header-files.md) , стандартная библиотека c++ будет автоматически связываться с Visual C++ во время компиляции. Например:
+При создании окончательной версии проекта одна из основных библиотек среды выполнения C ( *`libcmt.lib`* , *`msvcmrt.lib`* , *`msvcrt.lib`* ) по умолчанию связана в зависимости от выбранного параметра компилятора (многопоточная, DLL **`/clr`** ). Если включить в код один из [файлов заголовков стандартной библиотеки c++](../standard-library/cpp-standard-library-header-files.md) , стандартная библиотека c++ будет автоматически связываться с Visual C++ во время компиляции. Пример:
 
 ```cpp
 #include <ios>
@@ -117,7 +118,7 @@ ms.locfileid: "102514698"
 
 Будьте внимательны, если программа передает определенные ресурсы CRT через границы DLL. Такие ресурсы, как дескрипторы файлов, языковые стандарты и переменные среды, могут вызывать проблемы даже при использовании той же версии CRT. Дополнительные сведения о связанных проблемах и способах их устранения см. в разделе [Потенциальные ошибки при передаче объектов CRT через границы DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)
 - [Распространение файлов Visual C++](../windows/redistributing-visual-cpp-files.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: b87db43fbaabf1e9be18c56185ee190e3b2cbcac
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 2c8e5995beabb63ff3b53c52874bb5b7c5f2a61e
+ms.sourcegitcommit: a89eac9acdbd54a181e3bd5d5bc71a3ef3c1abca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324256"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106506030"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Объекты функции в стандартной библиотеке C++
 
@@ -48,7 +48,7 @@ int main()
 
 ## <a name="function-objects-and-containers"></a>Объекты функций и контейнеры
 
-Стандартная библиотека C++ содержит несколько объектов функций в [\<functional>](../standard-library/functional.md) файле заголовка. Один из этих объектов функций применяется как критерий сортировки для контейнеров. Например, контейнер `set` объявляется следующим образом:
+Стандартная библиотека C++ содержит несколько объектов функций в [`<functional>`](../standard-library/functional.md) файле заголовка. Один из этих объектов функций применяется как критерий сортировки для контейнеров. Например, контейнер `set` объявляется следующим образом:
 
 ```cpp
 template <class Key,
@@ -71,7 +71,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-Последний аргумент `remove_if` является объектом функции, который возвращает логическое значение ( *предикат*). Если результат объекта функции — **`true`** , то элемент удаляется из контейнера, к которому обращаются итераторы `first` и `last` . Можно использовать любой объект функции, объявленный в [\<functional>](../standard-library/functional.md) заголовке аргумента, `pred` или создать собственный.
+Последний аргумент `remove_if` является объектом функции, который возвращает логическое значение ( *предикат*). Если результат объекта функции — **`true`** , то элемент удаляется из контейнера, к которому обращаются итераторы `first` и `last` . Можно использовать любой объект функции, объявленный в [`<functional>`](../standard-library/functional.md) заголовке аргумента, `pred` или создать собственный.
 
 ## <a name="see-also"></a>См. также раздел
 

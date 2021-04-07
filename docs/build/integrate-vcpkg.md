@@ -3,12 +3,12 @@ title: Интеграция vcpkg с Visual Studio или Visual Studio Code
 description: Сведения об интеграции vcpkg с Visual Studio в Windows или Visual Studio Code в macOS и Linux.
 ms.date: 12/11/2020
 ms.technology: cpp-ide
-ms.openlocfilehash: b6f092313dde14b10a05d4cff0904adf5174b264
-ms.sourcegitcommit: 2b2c3fa9244e31db35ea33554dea0efcab490f3c
+ms.openlocfilehash: a08820ad65781a89ec6bc59a62d615cae2798b4b
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684135"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099382"
 ---
 # <a name="integrate-vcpkg-with-visual-studio-or-visual-studio-code"></a>Интеграция vcpkg с Visual Studio или Visual Studio Code
 
@@ -53,5 +53,5 @@ vcpkg — это кроссплатформенный диспетчер пак
 [Установка vcpkg](install-vcpkg.md)\
 [Управление библиотеками с помощью vcpkg](manage-libraries-with-vcpkg.md)\
 [Справочник по командной строке vcpkg](vcpkg-command-line-reference.md)\
-[Краткое руководство](https://github.com/microsoft/vcpkg/blob/master/docs/index.md)\
+[Краткое руководство](https://github.com/microsoft/vcpkg/blob/master/docs/README.md)\
 [Часто задаваемые вопросы по Аналитике компьютеров](https://github.com/microsoft/vcpkg/blob/master/docs/about/faq.md)

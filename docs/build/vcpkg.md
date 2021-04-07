@@ -5,12 +5,12 @@ ms.custom: contperf-fy21q2
 ms.date: 12/11/2020
 ms.topic: overview
 ms.technology: cpp-ide
-ms.openlocfilehash: f937f1df718bf8dfcc0ae5166d8b9eb671d2d8ab
-ms.sourcegitcommit: 2b2c3fa9244e31db35ea33554dea0efcab490f3c
+ms.openlocfilehash: 23ad9b34a04791181b83bcae3d413d6dfe0eed00
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97682470"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099603"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и macOS
 
@@ -63,5 +63,5 @@ vcpkg собирает данные об использовании, котор�
 [Интеграция vcpkg](integrate-vcpkg.md)\
 [Управление библиотеками с помощью vcpkg](manage-libraries-with-vcpkg.md)\
 [Справочник по командной строке vcpkg](vcpkg-command-line-reference.md)\
-[Краткое руководство](https://github.com/microsoft/vcpkg/blob/master/docs/index.md)\
+[Краткое руководство](https://github.com/microsoft/vcpkg/blob/master/docs/README.md)\
 [Часто задаваемые вопросы по Аналитике компьютеров](https://github.com/microsoft/vcpkg/blob/master/docs/about/faq.md)
