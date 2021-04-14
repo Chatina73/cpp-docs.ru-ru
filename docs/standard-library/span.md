@@ -1,19 +1,19 @@
 ---
-title: '&lt;размещать&gt;'
+title: <span>
 description: Справочник по API для пространства имен, охватывающего библиотеку стандартных шаблонов (STL), который предоставляет упрощенное представление для непрерывной последовательности объектов.
 ms.date: 05/28/2020
 f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: f4c6b141dfea6464e58d06e221a39a693469d31c
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 6f8a7e6ecbc02adeae7301dfc7eead2812c3c1f5
+ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039876"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107381159"
 ---
-# <a name="ltspangt"></a>&lt;размещать&gt;
+# `<span>`
 
 `span`Представляет собой представление для непрерывной последовательности объектов. Он обеспечивает быстрый и ограниченный доступ. В отличие от `vector` или `array` , он не "владеет" элементами, к которым он предоставляет доступ.
 
@@ -53,7 +53,7 @@ int main()
 
 **Параметр компилятора:** [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md)
 
-## <a name="members"></a>Элементы
+## <a name="members"></a>Члены
 
 ### <a name="classes"></a>Классы
 

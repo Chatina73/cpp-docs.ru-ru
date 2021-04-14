@@ -1,32 +1,34 @@
 ---
-title: /Транслатеинклуде (преобразование директив include в директивы Import)
-description: 'Используйте параметр компилятора/Транслатеинклуде, чтобы преобразовать директивы #include для импортируемого заголовка-name в директиву Import Header-Name.'
-ms.date: 09/13/2020
+title: /translateInclude (преобразование директив include в директивы Import)
+description: 'Используйте параметр компилятора/Транслатеинклуде, чтобы обрабатывать директивы #include как операторы импорта, если доступна доступная единица заголовка.'
+ms.date: 4/13/2021
+author: tylermsft
+ms.author: twhitney
 f1_keywords:
 - /translateInclude
 helpviewer_keywords:
 - /translateInclude
 - Translate include directives into import directives
-ms.openlocfilehash: 0050f2cb117e48d69cf97a587ef128b9b45790af
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: e700e79c64be466e33e0ee698114c85eba1f7e18
+ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90079163"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107381312"
 ---
-# <a name="translateinclude-translate-include-directives-into-import-directives"></a>`/translateInclude` (Преобразование директив include в директивы Import)
+# <a name="translateinclude-translate-include-directives-into-import-directives"></a>`/translateInclude` (преобразование директив include в директивы import)
 
-Указывает компилятору на необходимость преобразования `#include` директив для импорта имени заголовка в `import header-name;` директиву вместо использования текстового включения.
+Указывает компилятору обрабатываться `#include` как `import` для тех заголовков, которые были предварительно встроены в файл блока заголовков ( `.ifc` ).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **`/translateInclude`**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Для **`/translateInclude`** параметра компилятора требуется включить поддержку экспериментальных модулей с помощью [`/experimental:module`](experimental-module.md) параметра компилятора, а также параметр [/std: c + + Latest](std-specify-language-standard-version.md) . Этот параметр доступен начиная с Visual Studio 2019 версии 16,8.
+Для **`/translateInclude`** использования параметра компилятора необходимо включить параметр [/std: c + + Latest](std-specify-language-standard-version.md) . `/translateInclude` доступен начиная с Visual Studio 2019 версии 16,10 (Предварительная версия 2).
 
-Этот **`/translateInclude`** параметр обеспечивает следующее преобразование, в котором в качестве примера `<vector>` используется импортная единица заголовка:
+Этот **`/translateInclude`** параметр позволяет сделать следующее преобразование, в котором пример был `<vector>` встроен в блок заголовка с возможностью импорта:
 
 ```cpp
 #include <vector>
@@ -35,10 +37,10 @@ ms.locfileid: "90079163"
 Компилятор заменяет эту директиву следующим:
 
 ```cpp
-import <vector> ;
+import <vector>;
 ```
 
-В КОМПИЛЯТОРОМ MSVC единица заголовка с импортом называется **`/headerUnit`** ссылкой. Дополнительные сведения см. в разделе [ `/headerUnit` (использование единицы заголовка ИФК)](headerunit.md).
+В КОМПИЛЯТОРОМ MSVC доступные единицы заголовков доступны в **`/headerUnit`** параметре, который сопоставляет заголовочный файл с соответствующей предварительно построенной единицей заголовка. Дополнительные сведения см. в разделе [ `/headerUnit` (указание места поиска файла единицы заголовка ( `.ifc` ) для указанного заголовка)](headerunit.md).
 
 ### <a name="examples"></a>Примеры
 
@@ -58,25 +60,27 @@ import <vector> ;
 int main() { }
 ```
 
-**`/translateInclude`** Параметр позволяет компилятору импортировать единицы заголовка вместо компиляции заголовков. Ниже приведен пример командной строки, которая преобразует директивы include для *`util.h`* и *`app.h`* в импортируемые единицы заголовков.
+**`/translateInclude`** Параметр позволяет компилятору интерпретировать `#include` как `import` для файлов заголовков, которые имеют соответствующий скомпилированный файл заголовка ( *`.ifc`* ) и были указаны в командной строке с помощью `/headerUnit` параметра.
+
+Если `#include` обнаруживается, что не имеет соответствующего блока заголовка, указанного с помощью `/headerUnit` переключателя, он обрабатывается препроцессором как обычная `#include` директива.
+
+ Ниже приведен пример командной строки, которая преобразует директивы include для *`util.h`* и *`app.h`* в импортируемые единицы заголовков.
 
 ```CMD
-cl /IC:\ /experimental:module /translateInclude /headerUnit C:\utils\util.h=C:\util.h.ifc /headerUnit C:\app\app.h=C:\app.h.ifc
+cl /IC:\ /translateInclude /headerUnit C:\utils\util.h=C:\util.h.ifc /headerUnit C:\app\app.h=C:\app.h.ifc
 ```
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
+## <a name="to-set-this-compiler-option-in-visual-studio"></a>Установка параметра компилятора в Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
+Чтобы включить `/translateInclude` эту функцию, установите в свойствах проекта параметр **преобразовать включает в импорт** :
 
-1. Выберите в раскрывающемся списке **Конфигурация** значение **все конфигурации**.
+1. В левой области страницы свойств проекта выберите **Свойства конфигурации**  >  **C/C++**  >  **Общие** .
+1. Изменение раскрывающегося списка **перевод включен в импорт** в значение **Да**. 
+ ![ диалоговое окно свойств проекта преобразование включается в импорт](../media/vs2019-translate-includes-option.png)
 
-1. Выберите страницу свойств **Свойства конфигурации**  >  **C/C++**  >  **Командная строка** .
-
-1. Измените свойство **Дополнительные параметры** , чтобы добавить *`/translateInclude`* параметр. Затем нажмите кнопку **ОК** или **Применить** , чтобы сохранить изменения.
 
 ## <a name="see-also"></a>См. также раздел
 
-[`/experimental:module` (Включение поддержки модуля)](experimental-module.md)\
 [ `/headerUnit` (Используйте единицу заголовка ИФК)](headerunit.md). \
-[`/module:exportHeader` (Создание единиц заголовка)](module-exportheader.md)\
-[`/module:reference` (Используйте именованный модуль ИФК)](module-reference.md)
+[`/exportHeader` (Создание единиц заголовка)](module-exportheader.md)\
+[`/reference` (использование IFC для именованного модуля)](module-reference.md)
