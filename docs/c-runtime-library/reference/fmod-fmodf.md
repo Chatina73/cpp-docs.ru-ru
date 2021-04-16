@@ -35,12 +35,12 @@ helpviewer_keywords:
 - fmodl function
 - fmod function
 - floating-point numbers, calculating remainders
-ms.openlocfilehash: 8d2c3bcb0f871eb707f264478c4ce492bbb9c80c
-ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
+ms.openlocfilehash: 02089e44f1eca66ef5452b73144bfe670e20cd94
+ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98563942"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107577369"
 ---
 # <a name="fmod-fmodf-fmodl"></a>`fmod`, `fmodf`, `fmodl`
 
@@ -82,7 +82,7 @@ long double fmodl(
 
 **`fmod`** Возвращает остаток от деления с плавающей запятой *`x`*  /  *`y`* . Если значение *`y`* равно 0,0, **`fmod`** возвращает нетихом NaN. Сведения о том, как семейство не является беспоконым **`printf`** , см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 
 **`fmod`** Функция вычисляет значение *f* остатка с плавающей запятой *`x`*  /  *`y`* таким образом, что *`x`*  =  *i* \* *`y`*  +  *`f`* , где *`i`* является целым числом, *`f`* имеет тот же знак, что *`x`* и абсолютное значение, *`f`* меньше абсолютного значения *`y`* .
 
@@ -123,10 +123,10 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)\
 [`ceil, ceilf, ceill`](ceil-ceilf-ceill.md)\
 [`fabs, fabsf, fabsl`](fabs-fabsf-fabsl.md)\
-[ж`loor, floorf, floorl`](floor-floorf-floorl.md)\
+[`floor, floorf, floorl`](floor-floorf-floorl.md)\
 [`_CIfmod`](../../c-runtime-library/cifmod.md)

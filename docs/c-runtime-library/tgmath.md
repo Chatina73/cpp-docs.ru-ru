@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.date: 12/10/2020
 helpviewer_keywords:
 - CRT tgmath.h
-ms.openlocfilehash: 70ade08387ebbca9dd1ecd68cce92f5fd8ba936b
-ms.sourcegitcommit: be469dd87453255b0e35e333712c8207b09b3dd4
+ms.openlocfilehash: 38d6e5fba1f2087f692d7b18526f5da43d0683e1
+ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97411854"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107577222"
 ---
 # <a name="type-generic-math"></a>Математические символы универсального типа
 
@@ -91,9 +91,9 @@ ms.locfileid: "97411854"
 
 ## <a name="requirements"></a>Требования
 
-[std: требуется c++ 11](../build/reference/std-specify-language-standard-version.md) или более поздней версии.
+Требуется [std:c++11](../build/reference/std-specify-language-standard-version.md) или более поздней версии.
 
-Windows SDK версии 10.0.20201.0 или более поздней. В настоящее время это сборка для участников предварительной оценки, которую можно загрузить из [скачивания ознакомительных версий Windows Insider](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)Preview. Инструкции по установке и использованию этого пакета SDK см. в разделе [C11 и C17: Начало работы](https://devblogs.microsoft.com/cppblog/c11-and-c17-standard-support-arriving-in-msvc/#c11-and-c17-getting-started) .
+Пакет Windows SDK версии 10.0.20201.0 или более поздней. В настоящее время это сборка для участников предварительной оценки, которую можно загрузить из [скачивания ознакомительных версий Windows Insider](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)Preview. Инструкции по установке и использованию этого пакета SDK см. в разделе [C11 и C17: Начало работы](https://devblogs.microsoft.com/cppblog/c11-and-c17-standard-support-arriving-in-msvc/#c11-and-c17-getting-started) .
 
 ## <a name="see-also"></a>См. также раздел
 

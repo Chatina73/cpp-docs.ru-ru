@@ -1,5 +1,5 @@
 ---
-title: '/СаурцедепенденЦиес: директивы (список зависимостей модулей и заголовков)'
+title: /sourceDependencies:directives (список зависимостей модулей и блоков заголовков)
 description: 'Справочное руководство по параметру компилятора/СаурцедепенденЦиес: directives в Microsoft C++.'
 ms.date: 04/13/2020
 author: tylermsft
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - /sourceDependencies:directives compiler option
 - /sourceDependencies:directives
-ms.openlocfilehash: ecc2b107eae6a4f2a331084d7fe9813f34277915
-ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
+ms.openlocfilehash: 6ac33db30a007226382d3ac331ab5f2699a85c8c
+ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107381726"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107577136"
 ---
 # <a name="sourcedependenciesdirectives-list-module-and-header-unit-dependencies"></a>`/sourceDependencies:directives` (Список зависимостей модулей и заголовков)
 
@@ -28,7 +28,7 @@ ms.locfileid: "107381726"
 - В выходном JSON-файле не перечислены импортированные модули и импортированные единицы заголовков ( *`.ifc`* файлы), так как этот параметр выполняет проверку файлов проекта, а не компиляцию. Поэтому в списке нет готовых модулей или блоков заголовков.
 - Отображаются только непосредственно импортированные модули или единицы заголовков. В нем не перечислены зависимости импортируемых модулей или самих блоков заголовков.
 - Зависимости файла заголовков не перечислены. То есть `#include <file>` зависимости или отсутствуют в `#include "file"` списке.
-- `/sourceDependencies:directives`предназначен для использования перед *`.ifc`* построением файлов.
+- `/sourceDependencies:directives` предназначен для использования перед *`.ifc`* построением файлов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,7 +47,7 @@ ms.locfileid: "107381726"
 *`directory`*\
 Если аргумент является каталогом, компилятор создает исходные файлы зависимостей в указанном каталоге. Имя выходного файла основано на полном имени входного файла с добавленным *`.json`* расширением. Например, если файл, предоставленный компилятору, имеет значение *`main.cpp`* , то созданное выходное имя файла будет равно *`main.cpp.json`* .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 **`/sourceDependencies:directives`** доступен начиная с Visual Studio 2019 версии 16,10 (Предварительная версия 2). По умолчанию оно отключено.
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: Используйте объявления импорта и экспорта для доступа к типам и функциям, определенным в указанном модуле, и для публикации типов и функций.
-ms.openlocfilehash: 5be1618d7e64f6887cf78bd863d428d6710eaf7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 360f940f2633641e13c93ecb9083d7e785794381
+ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187196"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107577196"
 ---
 # <a name="module-import-export"></a>модуль, импорт, экспорт
 
-**Модуль**, **Импорт**и **`export`** объявления доступны в c++ 20, и требуется параметр компилятора [/експериментал: module](../build/reference/experimental-module.md) вместе с [/std: C + + Latest](../build/reference/std-specify-language-standard-version.md). Дополнительные сведения см. в разделе Общие сведения о [модулях в C++](modules-cpp.md).
+**Модуль**, **Импорт** и **`export`** объявления доступны в c++ 20, и требуется параметр компилятора [/експериментал: module](../build/reference/experimental-module.md) вместе с [/std: C + + Latest](../build/reference/std-specify-language-standard-version.md). Дополнительные сведения см. в разделе Общие сведения о [модулях в C++](modules-cpp.md).
 
 ## <a name="module"></a>module
 
@@ -86,7 +86,7 @@ class Baz
 {...};
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Замечания
 
 **Импорт** и **модуль** рассматриваются как ключевые слова, только если они появляются в начале логической строки:
 
@@ -117,7 +117,7 @@ int i; module ;
 ### <a name="example"></a>Пример
 
 ```cpp
-#define foo(…) __VA_ARGS__
+#define foo(...) __VA_ARGS__
 foo(
 import // Always an identifier, never a keyword
 )

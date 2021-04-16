@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: f10d6c31e60c4f8deac2ba924ec5f9de6faec30c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: fe5e1add183aa69bd4632355082c615378fd4050
+ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97176136"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107576876"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Класс Platform::Collections::VectorViewIterator
 
@@ -112,7 +112,7 @@ VectorViewIterator operator--(int);
 
 Первый синтаксис выполняет уменьшение текущего итератора VectorViewIterator и возвращает его. Второй синтаксис возвращает копию текущего итератора VectorViewIterator, а затем выполняет уменьшение текущего итератора VectorViewIterator.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Первый синтаксис выполняет уменьшение текущего итератора VectorViewIterator перед его использованием.
 
@@ -207,7 +207,7 @@ VectorViewIterator operator++(int);
 
 Первый синтаксис выполняет приращение текущего итератора VectorViewIterator и возвращает его. Второй синтаксис возвращает копию текущего итератора VectorViewIterator, а затем выполняет приращение текущего итератора VectorViewIterator.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Первый синтаксис выполняет приращение текущего итератора VectorViewIterator перед его использованием.
 
@@ -406,7 +406,7 @@ explicit VectorViewIterator(
 *v*<br/>
 Объект IVectorView \<T> .
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Первый пример синтаксиса является конструктором по умолчанию. Вторым примером синтаксиса является явный конструктор, который используется для создания VectorViewIterator из \<T> объекта IVectorView.
 

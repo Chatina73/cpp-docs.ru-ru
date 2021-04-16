@@ -1,5 +1,5 @@
 ---
-title: /Експорсеадер (создание единиц заголовка)
+title: /exportHeader (создание блоков заголовков)
 description: Используйте параметр компилятора/Експорсеадер, чтобы создать единицы заголовков модулей для указанных заголовочных или включаемых файлов.
 ms.date: 04/13/2020
 author: tylermsft
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - /exportHeader
 - Create header units
-ms.openlocfilehash: c116b3786b17f0a4574acff01b661a212767aa68
-ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
+ms.openlocfilehash: 41b7d35b5468aade9515aab151b9090dcc1fb665
+ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107381341"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107577169"
 ---
 # <a name="exportheader-create-header-units"></a>`/exportHeader` (создание единиц заголовков)
 
@@ -30,7 +30,7 @@ ms.locfileid: "107381341"
 
 Аргумент для `/exportHeader` — это `/headerName` параметр командной строки, указывающий имя  *`header-name`* файла заголовка для экспорта.  
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 **`/exportHeader`** доступен начиная с Visual Studio 2019 версии 16,10 (Предварительная версия 2).
 
@@ -51,13 +51,13 @@ ms.locfileid: "107381341"
 Для создания единицы заголовка, например, `<vector>` может выглядеть следующим образом:
 
 ```cmd
-cl … /std:c++latest /exportHeader /headerName:angle vector
+cl . . . /std:c++latest /exportHeader /headerName:angle vector
 ```
 
 Создание локального заголовка проекта, например, `"utils/util.h"` может выглядеть следующим образом:
 
 ```cmd
-cl … /std:c++latest /exportHeader /headerName:quote util/util.h
+cl . . . /std:c++latest /exportHeader /headerName:quote util/util.h
 ```
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio

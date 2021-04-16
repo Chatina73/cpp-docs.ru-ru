@@ -46,14 +46,14 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: 3cbfa2b2f8450adf07b2040fb2be0932377c9e37
-ms.sourcegitcommit: d531c567c268b676b44abbc8416ba7e20d22044b
+ms.openlocfilehash: 935fd90e08d44f2bc2a7a8c44a3089d411d370d2
+ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/16/2021
-ms.locfileid: "107539569"
+ms.locfileid: "107577097"
 ---
-# <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>`strcpy_s`, `wcscpy_` s, `_mbscpy_s` , `_mbscpy_s_l`
+# <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>`strcpy_s`, `wcscpy_s`, `_mbscpy_s`, `_mbscpy_s_l`
 
 Копирует строку. Эти версии [ `strcpy` , `wcscpy` `_mbscpy` ](strcpy-wcscpy-mbscpy.md) обладают усовершенствованиями системы безопасности, как описано в разделе [функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -137,7 +137,7 @@ errno_t _mbscpy_s_l(
 |any|any|**`NULL`**|**`EINVAL`**|*`dest[0]`* Задайте значение 0.|
 |any|0 или слишком мал|any|**`ERANGE`**|*`dest[0]`* Задайте значение 0.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 
 **`strcpy_s`** Функция копирует содержимое в адрес *`src`* , включая завершающий символ null, в расположение, указанное параметром *`dest`* . Строка назначения должна быть достаточно велика для сохранения исходной строки и завершающего нуля. Поведение **`strcpy_s`** не определено, если строки источника и назначения перекрываются.
 
