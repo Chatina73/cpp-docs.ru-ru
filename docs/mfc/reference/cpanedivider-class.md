@@ -85,12 +85,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: f2541483f7881ab0b303750e69af776c2c3bc7a7
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9f05b419a2eb420794fcd416f603592e4ce8bb07
+ms.sourcegitcommit: d531c567c268b676b44abbc8416ba7e20d22044b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97301520"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107539602"
 ---
 # <a name="cpanedivider-class"></a>Класс Кпанедивидер
 
@@ -129,7 +129,9 @@ class CPaneDivider : public CBasePane
 |[Кпанедивидер:: Финдтаббедпане](#findtabbedpane)||
 |[Кпанедивидер:: Жетдефаултвидс](#getdefaultwidth)||
 |[Кпанедивидер:: Жетфирстпане](#getfirstpane)||
+|[Кпанедивидер:: Жетпанедивидерс](#getpanedividers)|Возвращает список разделителей областей, которые находятся в [классе кпанеконтаинер](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей панели по умолчанию.|
 |[Кпанедивидер:: Жетпанедивидерстиле](#getpanedividerstyle)||
+|[Кпанедивидер:: выпанели](#getpanes)|Возвращает список панелей, находящихся в [классе кпанеконтаинер](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей панели по умолчанию.|
 |[Кпанедивидер:: Жетрутконтаинеррект](#getrootcontainerrect)||
 |[Кпанедивидер:: Полуширинный](#getwidth)||
 |[Кпанедивидер:: init](#init)||
@@ -150,15 +152,6 @@ class CPaneDivider : public CBasePane
 |[Кпанедивидер:: ShowWindow](#showwindow)||
 |[Кпанедивидер:: Сторерецентдоккситеинфо](#storerecentdocksiteinfo)||
 |[Кпанедивидер:: Сторереценттабрелатединфо](#storerecenttabrelatedinfo)||
-
-### <a name="public-methods"></a>Открытые методы
-
-|name|Описание|
-|----------|-----------------|
-|[Кпанедивидер:: выпанели](#getpanes)|Возвращает список панелей, находящихся в [классе кпанеконтаинер](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей панели по умолчанию.|
-|[Кпанедивидер:: Жетпанедивидерс](#getpanedividers)|Возвращает список разделителей областей, которые находятся в [классе кпанеконтаинер](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей панели по умолчанию.|
-
-### <a name="data-members"></a>Элементы данных
 
 |Имя|Описание|
 |----------|-----------------|

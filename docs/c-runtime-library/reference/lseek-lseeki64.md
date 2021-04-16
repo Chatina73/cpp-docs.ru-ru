@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 5ac536a0f1388f8d664aa6721900256da368d652
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 69a495eda02faa06bd173483d0b292dea11abc13
+ms.sourcegitcommit: d531c567c268b676b44abbc8416ba7e20d22044b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97299973"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107539723"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
@@ -70,7 +70,7 @@ __int64 _lseeki64(
 *offset*<br/>
 Количество байт, начиная с *origin*.
 
-*лета*<br/>
+*Исходное подключение*<br/>
 Первоначальная позиция.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -83,7 +83,7 @@ __int64 _lseeki64(
 
 Функция **_lseek** перемещает указатель на файл, связанный с *демоном* , в новое расположение, которое *смещается* в байтах с *начала*. Следующая операция в файле выполняется в новом местоположении. Аргумент *origin* должен быть одной из следующих констант, определенных в Stdio.h.
 
-|значение *происхождения*||
+|значение *происхождения*| Описание |
 |-|-|
 | **SEEK_SET** | Начало файла. |
 | **SEEK_CUR** | Текущая позиция указателя файла. |

@@ -1,28 +1,28 @@
 ---
+description: 'Дополнительные сведения: создание приложения UWP с помощью WRL и Media Foundation'
 title: Пошаговое руководство. Создание приложения UWP с использованием WRL и Media Foundation
-ms.date: 04/23/2019
+ms.date: 04/15/2021
 ms.topic: reference
-ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: fecfc83e674c418a920e3dd73149f4d6294090fa
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 823d5d53da5d67f79cb4f79e24560d6d581772c3
+ms.sourcegitcommit: d531c567c268b676b44abbc8416ba7e20d22044b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404929"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107539288"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Пошаговое руководство. Создание приложения UWP с использованием WRL и Media Foundation
 
 > [!NOTE]
 > Для новых приложений и компонентов UWP рекомендуется использовать [c++/WinRT](/windows/uwp/cpp-and-winrt-apis/)— новую стандартную проекцию c++ 17 для Среда выполнения Windows API. C++/WinRT доступна в пакете SDK для Windows 10, начиная с версии 1803. C++/WinRT реализована полностью в файлах заголовков и предназначена для предоставления доступа к современным API Windows через первый класс.
 
-В этом руководстве вы узнаете, как использовать библиотеку шаблонов среда выполнения Windows C++ (WRL) для создания приложения универсальная платформа Windows (UWP), использующего [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
+В этом руководстве вы узнаете, как использовать библиотеку шаблонов C++ среда выполнения Windows (WRL) для создания приложения универсальная платформа Windows (UWP), использующего [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
 
-В этом примере создается пользовательский объект Media Foundation, который применяет эффект "оттенки серого" к изображениям, полученным с веб-камеры. Приложение использует C++ для определения пользовательского преобразования и C# для использования компонента и выполнения преобразования захваченного изображения.
+В этом примере создается настраиваемое преобразование Media Foundation. Он применяет к изображениям, захваченным с веб-камеры, эффекты в градациях серого. Приложение использует C++ для определения пользовательского преобразования и C# для использования компонента и выполнения преобразования захваченного изображения.
 
 > [!NOTE]
 > Чтобы воспользоваться пользовательским компонентом преобразования вместо C# можно также использовать JavaScript, Visual Basic или C++.
 
-В большинстве случаев для создания среда выполнения Windows можно использовать C++/CX. Однако иногда необходимо использовать WRL. Например, при создании расширения мультимедиа для Microsoft Media Foundation необходимо создать компонент, реализующий интерфейсы COM и среда выполнения Windows. Поскольку C++/CX может создавать только объекты среда выполнения Windows, для создания расширения мультимедиа необходимо использовать WRL, так как он позволяет реализовать интерфейсы COM и среда выполнения Windows.
+Для создания среда выполнения Windows компонентов обычно можно использовать C++/CX. Однако иногда необходимо использовать WRL. Например, при создании расширения мультимедиа для Microsoft Media Foundation необходимо создать компонент, реализующий интерфейсы COM и среда выполнения Windows. Так как C++/CX может создавать только объекты среда выполнения Windows, для создания расширения мультимедиа необходимо использовать WRL. Это обусловлено тем, что позволяет реализовать интерфейсы COM и среда выполнения Windows.
 
 > [!NOTE]
 > Хотя этот пример кода является объемным, он показывает минимум, необходимый для создания полезных преобразований Media Foundation. Его можно использовать в качестве отправной точки для собственного пользовательского преобразования. Этот пример адаптируется из [примера расширений мультимедиа](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples), в котором используются расширения мультимедиа для применения эффектов к видео, расшифровки видео и создания обработчиков схем, создающих потоки мультимедиа.
@@ -43,13 +43,13 @@ ms.locfileid: "86404929"
 
 - `namespace`Атрибуты и `runtimeclass` , а также `NTDDI_WIN8` значение атрибута [Version](/windows/win32/Midl/version) являются важными частями определения MIDL для Media Foundation компонента, использующего WRL.
 
-- [Microsoft:: WRL:: RuntimeClass](runtimeclass-class.md) является базовым классом для пользовательского компонента Media Foundation. Значение перечисления [Microsoft:: WRL:: RuntimeClassType:: WinRtClassicComMix](runtimeclasstype-enumeration.md) , которое указывается в качестве аргумента шаблона, помечает класс для использования в качестве класса среда выполнения Windows и классического класса среды выполнения COM.
+- [`Microsoft::WRL::RuntimeClass`](runtimeclass-class.md) является базовым классом для пользовательского компонента Media Foundation. `Microsoft::WRL::RuntimeClassType::WinRtClassicComMix]`Значение перечисления [(runtimeclasstype-Enumeration.md), которое указывается в качестве аргумента шаблона, помечает класс для использования в качестве класса среда выполнения Windows и классического класса среды выполнения COM.
 
-- Макрос [InspectableClass](inspectableclass-macro.md) реализует базовые функциональные возможности com, такие как подсчет ссылок и `QueryInterface` метод, и задает имя класса среды выполнения и уровень доверия.
+- [`InspectableClass`](inspectableclass-macro.md)Макрос реализует базовые функциональные возможности com, такие как подсчет ссылок и `QueryInterface` метод, и задает имя класса среды выполнения и уровень доверия.
 
-- Используйте класс Microsoft:: WRL::[module](module-class.md) , чтобы реализовать функции точки входа DLL, такие как [дллжетактиватионфактори](/windows/win32/winrt/functions), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)и [DllGetClassObject](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Используйте [`Microsoft::WRL::Module`](module-class.md) класс для реализации функций точки входа DLL, таких как [`DllGetActivationFactory`](/windows/win32/winrt/functions) , [`DllCanUnloadNow`](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow) и [`DllGetClassObject`](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject) .
 
-- Необходимо установить связь между компонентом DLL и runtimeobject.lib. Также укажите [/WinMD](../../cppcx/compiler-and-linker-options-c-cx.md) в строке компоновщика для создания метаданных Windows.
+- Свяжите библиотеку DLL компонента с *`runtimeobject.lib`* . Также укажите [`/WINMD`](../../cppcx/compiler-and-linker-options-c-cx.md) в строке компоновщика, чтобы создать метаданные Windows.
 
 - Используйте ссылки проекта, чтобы сделать компоненты WRL доступными для приложений UWP.
 
@@ -59,29 +59,29 @@ ms.locfileid: "86404929"
 
 1. Добавьте в решение проект **DLL (универсальный Windows)** . Присвойте проекту имя, например *грайскалетрансформ*.
 
-1. Добавьте в проект файл **MIDL (. IDL)** . Присвойте файлу имя, например *грайскалетрансформ. idl*.
+1. Добавьте в проект файл **MIDL (. IDL)** . Присвойте файлу имя, например *`GrayscaleTransform.idl`* .
 
 1. Добавьте следующий код в Грайскалетрансформ. IDL:
 
    [!code-cpp[wrl-media-capture#1](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]
 
-1. Используйте следующий код, чтобы заменить содержимое `pch.h` :
+1. Используйте следующий код, чтобы заменить содержимое *`pch.h`* :
 
    [!code-cpp[wrl-media-capture#2](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]
 
-1. Добавьте новый файл заголовка в проект, присвойте ему имя `BufferLock.h` , а затем замените содержимое следующим кодом:
+1. Добавьте новый файл заголовка в проект, присвойте ему имя *`BufferLock.h`* , а затем замените содержимое следующим кодом:
 
    [!code-cpp[wrl-media-capture#3](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]
 
-1. `GrayscaleTransform.h`не используется в этом примере. Его можно удалить из проекта при необходимости.
+1. *`GrayscaleTransform.h`* не используется в этом примере. Его можно удалить из проекта при необходимости.
 
-1. Используйте следующий код, чтобы заменить содержимое `GrayscaleTransform.cpp` :
+1. Используйте следующий код, чтобы заменить содержимое *`GrayscaleTransform.cpp`* :
 
    [!code-cpp[wrl-media-capture#4](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]
 
-1. Добавьте новый файл определения модуля в проект, присвойте ему имя `GrayscaleTransform.def` , а затем добавьте следующий код:
+1. Добавьте новый файл определения модуля в проект, присвойте ему имя *`GrayscaleTransform.def`* , а затем добавьте следующий код:
 
-   ```
+   ```idl
    EXPORTS
        DllCanUnloadNow                     PRIVATE
        DllGetActivationFactory             PRIVATE
@@ -94,11 +94,11 @@ ms.locfileid: "86404929"
 
 1. В диалоговом окне **страницы свойств** проекта задайте следующие свойства **компоновщика** .
 
-   1. В разделе **входные данные**для **файла определения модуля**укажите `GrayScaleTransform.def` .
+   1. В разделе **входные данные** для **файла определения модуля** укажите `GrayScaleTransform.def` .
 
-   1. Кроме того, в разделе **входные данные**добавьте `runtimeobject.lib` , `mfuuid.lib` и `mfplat.lib` в свойство **Дополнительные зависимости** .
+   1. Кроме того, в разделе **входные данные** добавьте `runtimeobject.lib` , `mfuuid.lib` и `mfplat.lib` в свойство **Дополнительные зависимости** .
 
-   1. В разделе **метаданные Windows**задайте для параметра **создать метаданные Windows** значение **Да (/WinMD)**.
+   1. В разделе **метаданные Windows** задайте для параметра **создать метаданные Windows** значение **Да (/WinMD)**.
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Использование WRL компонента пользовательского Media Foundation из приложения C#
 
@@ -106,9 +106,9 @@ ms.locfileid: "86404929"
 
 1. В проекте **медиакаптуре** добавьте ссылку на `GrayscaleTransform` проект. Дополнительные сведения см. в разделе [как добавить или удалить ссылки с помощью диспетчера ссылок](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).
 
-1. В `Package.appxmanifest` на вкладке **возможности** выберите **микрофон** и **веб-камера**. Обе возможности необходимы для получения фотографий с веб-камеры.
+1. В *`Package.appxmanifest`* на вкладке **возможности** выберите **микрофон** и **веб-камера**. Обе возможности необходимы для получения фотографий с веб-камеры.
 
-1. В `MainPage.xaml` добавьте следующий код в корневой элемент [Grid](/uwp/api/windows.ui.xaml.controls.grid) :
+1. В *`MainPage.xaml`* добавьте следующий код в корневой [`Grid`](/uwp/api/windows.ui.xaml.controls.grid) элемент:
 
    [!code-xml[wrl-media-capture#7](../codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
@@ -118,13 +118,13 @@ ms.locfileid: "86404929"
 
 На следующем рисунке показан `MediaCapture app` .
 
-![Приложение MediaCapture, захватывающее фотографию](../media/wrl_media_capture.png "WRL_Media_Capture")
+![Снимок экрана приложения Медиакаптуре, записывающего фотографию.](../media/wrl_media_capture.png "WRL_Media_Capture")
 
 ## <a name="next-steps"></a>Next Steps
 
-Пример показывает способ записи фотографий (по одной) с веб-камеры по умолчанию. [Пример расширений мультимедиа](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) выполняет больше возможностей. В нем показано, как выполнить перебор веб-камер и работать с локальными обработчиками схем, а также демонстрируются дополнительные медиа-эффекты, работающие как на отдельных фотографиях, так и на потоках видео.
+Пример показывает способ записи фотографий (по одной) с веб-камеры по умолчанию. [Пример расширений мультимедиа](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) выполняет больше возможностей. Здесь показано, как перечислять видеокамеры и работать с локальными обработчиками схем. В этом примере также демонстрируются другие эффекты мультимедиа, которые работают как с отдельными фотографиями, так и с потоками видео.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Библиотека шаблонов C++ среды выполнения Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
+[Библиотека шаблонов C++ среда выполнения Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)\
 [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk)

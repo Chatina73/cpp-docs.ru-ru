@@ -46,19 +46,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: 737d5f2a8536bee57ff7ad568908a1dd81a2bf2c
-ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
+ms.openlocfilehash: 3cbfa2b2f8450adf07b2040fb2be0932377c9e37
+ms.sourcegitcommit: d531c567c268b676b44abbc8416ba7e20d22044b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102236593"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107539569"
 ---
-# <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
+# <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>`strcpy_s`, `wcscpy_` s, `_mbscpy_s` , `_mbscpy_s_l`
 
-Копирует строку. Это версии функций [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Копирует строку. Эти версии [ `strcpy` , `wcscpy` `_mbscpy` ](strcpy-wcscpy-mbscpy.md) обладают усовершенствованиями системы безопасности, как описано в разделе [функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s** и **_mbscpy_s_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **`_mbscpy_s`** и **`_mbscpy_s_l`** не могут использоваться в приложениях, выполняемых в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -113,16 +113,16 @@ errno_t _mbscpy_s_l(
 
 ### <a name="parameters"></a>Параметры
 
-*dest*<br/>
+*`dest`*<br/>
 Расположение строкового буфера назначения.
 
-*dest_size*<br/>
-Размер буфера строк назначения в **`char`** единицах для узких и многобайтовых функций, а также **`wchar_t`** единиц для расширенных функций. Это значение должно быть больше нуля и не больше **RSIZE_MAX**. Убедитесь, что этот размер учетных записей завершается `NULL` после строки.
+*`dest_size`*<br/>
+Размер буфера строк назначения в **`char`** единицах для узких и многобайтовых функций, а также **`wchar_t`** единиц для расширенных функций. Это значение должно быть больше нуля и не больше **`RSIZE_MAX`** . Убедитесь, что этот размер учетных записей завершается `NULL` после строки.
 
-*src*<br/>
+*`src`*<br/>
 Исходная строка, завершающаяся нулем.
 
-*locale*<br/>
+*`locale`*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -131,41 +131,41 @@ errno_t _mbscpy_s_l(
 
 ### <a name="error-conditions"></a>Ситуации, которые могут привести к ошибке
 
-|*dest*|*dest_size*|*src*|Возвращаемое значение|Содержимое конечного *объекта*|
+|*`dest`*|*`dest_size`*|*`src`*|Возвращаемое значение|Содержимое *`dest`*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**|any|any|**еинвал**|не изменено|
-|any|any|**NULL**|**еинвал**|*dest*[0] имеет значение 0|
-|any|0 или слишком мал|any|**ERANGE**|*dest*[0] имеет значение 0|
+|**`NULL`**|any|any|**`EINVAL`**|не изменено|
+|any|any|**`NULL`**|**`EINVAL`**|*`dest[0]`* Задайте значение 0.|
+|any|0 или слишком мал|any|**`ERANGE`**|*`dest[0]`* Задайте значение 0.|
 
 ## <a name="remarks"></a>Комментарии
 
-Функция **strcpy_s** копирует содержимое в адресе *src*, включая завершающий символ null, в расположение, указанное в параметре *dest*. Строка назначения должна быть достаточно велика для сохранения исходной строки и завершающего нуля. Поведение **strcpy_s** не определено, если строки источника и назначения перекрываются.
+**`strcpy_s`** Функция копирует содержимое в адрес *`src`* , включая завершающий символ null, в расположение, указанное параметром *`dest`* . Строка назначения должна быть достаточно велика для сохранения исходной строки и завершающего нуля. Поведение **`strcpy_s`** не определено, если строки источника и назначения перекрываются.
 
-**wcscpy_s** — это версия **strcpy_s** для расширенных символов, а **_mbscpy_s** — версия многобайтовых символов. Аргументы **wcscpy_s** являются строками расширенных символов; **_mbscpy_s** и **_mbscpy_s_l** являются строками многобайтовых символов. В остальном эти функции ведут себя одинаково. **_mbscpy_s_l** идентичен **_mbscpy_s** за исключением того, что он использует переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**`wcscpy_s`** — Это версия с расширенными символами **`strcpy_s`** , а **`_mbscpy_s`** — версия многобайтовых символов. Аргументы класса **`wcscpy_s`** — это строки расширенных символов; они **`_mbscpy_s`** **`_mbscpy_s_l`** являются строками многобайтовых символов. В остальном эти функции ведут себя одинаково. **`_mbscpy_s_l`** функция идентична **`_mbscpy_s`** , за исключением того, что использует переданный параметр языкового стандарта вместо текущего языкового стандарта. Дополнительные сведения см. на веб-сайте [`locale`](../../c-runtime-library/locale.md).
 
-Если *dest* или *src* является пустым указателем или если размер строки назначения *dest_size* слишком мал, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **еинвал** и **присвойте параметру «** **еинвал** », если *dest* или *src* является пустым указателем, и возвращают **ERANGE** и задали **значение** **ERANGE** , если строка назначения слишком мала.
+Если *`dest`* или *`src`* является пустым указателем или если размер строки назначения *`dest_size`* слишком мал, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **`EINVAL`** и устанавливают значение, **`errno`** **`EINVAL`** Если *`dest`* или *`src`* является пустым указателем, и возвращают **`ERANGE`** и устанавливают **`errno`** в, **`ERANGE`** когда строка назначения слишком мала.
 
 После успешного выполнения конечная строка всегда завершается нулем.
 
 В C++ использование данных функций упрощено наличием шаблонных перегрузок, которые могут автоматически определять длину буфера, а также автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-Версии отладочной библиотеки этих функций сначала заполняют буфер 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Версии отладочной библиотеки этих функций сначала заполняют буфер 0xFE. Чтобы отключить это поведение, используйте [`_CrtSetDebugFillThreshold`](crtsetdebugfillthreshold.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|`TCHAR.H` ассемблер|`_UNICODE` & `_MBCS` не определено|`_MBCS` определяется|`_UNICODE` определяется|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscpy_s**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
+|**`_tcscpy_s`**|**`strcpy_s`**|**`_mbscpy_s`**|**`wcscpy_s`**|
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**strcpy_s**|\<string.h>|
-|**wcscpy_s**|\<string.h> либо \<wchar.h>|
-|**_mbscpy_s**|\<mbstring.h>|
+|**`strcpy_s`**|`<string.h>`|
+|**`wcscpy_s`**|`<string.h>` или `<wchar.h>`|
+|**`_mbscpy_s`**|`<mbstring.h>`|
 
 Эти функции относятся только к Microsoft. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -235,11 +235,11 @@ stringBuffer = Hello world from wcscpy_s and wcscat_s!
 ## <a name="see-also"></a>См. также раздел
 
 [Управление строками](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
-[strcmp, wcscmp, _mbscmp, _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
-[strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
-[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
-[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>
-[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md) <br/>
-[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md) <br/>
-[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
+[`strcat`, `wcscat`, `_mbscat`, `_mbscat_l`](strcat-wcscat-mbscat.md) <br/>
+[`strcmp`, `wcscmp`, `_mbscmp`, `_mbscmp_l`](strcmp-wcscmp-mbscmp.md) <br/>
+[`strncat_s`, `_strncat_s_l`, `wcsncat_s`, `_wcsncat_s_l`, `_mbsncat_s`, `_mbsncat_s_l`](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
+[`strncmp`, `wcsncmp`, `_mbsncmp`, `_mbsncmp_l`](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
+[`strncpy_s`, `_strncpy_s_l`, `wcsncpy_s`, `_wcsncpy_s_l`, `_mbsncpy_s`, `_mbsncpy_s_l`](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>
+[`_strnicmp`, `_wcsnicmp`, `_mbsnicmp`, `_strnicmp_l`, `_wcsnicmp_l`, `_mbsnicmp_l`](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md) <br/>
+[`strrchr`, `wcsrchr`, `_mbsrchr`, `_mbsrchr_l`](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md) <br/>
+[`strspn`, `wcsspn`, `_mbsspn`, `_mbsspn_l`](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
