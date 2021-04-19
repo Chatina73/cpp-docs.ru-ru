@@ -135,12 +135,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: e3c182439d03fdefa476231f871c60d3d297a037
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: c27f73174c98b40efe7ef0d932ea4b2f8f371988
+ms.sourcegitcommit: 6d2a4ab362b657d17ce1cb336b22b5454dc2bc7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97212029"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107721190"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Предупреждения компилятора с C4400 по C4599
 
@@ -213,7 +213,7 @@ ms.locfileid: "97212029"
 |[Предупреждение компилятора (уровень 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|"*className*": Этот класс содержит метод завершения "! *метод завершения*", но не имеет деструктор" ~*dtor*"|
 |[Предупреждение компилятора (уровень 1, ошибка) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|"*тип*": не удается определить GUID типа. Программа может завершиться ошибкой во время выполнения.|
 |[Предупреждение компилятора (уровень 4) C4463](compiler-warning-level-4-c4463.md)|полн присвоение "*значение*" битовому полю, которое может содержать только значения "*MIN_VALUE*" в "*MAX_VALUE*"|
-|[Предупреждение компилятора (уровень 4) C4464](../../error-messages/compiler-warnings/c4464.md)|относительный путь включения содержит ".."|
+|[Предупреждение компилятора (уровень 4) C4464](../../error-messages/compiler-warnings/compiler-warning-level-4-c4464.md)|относительный путь включения содержит ".."|
 |[Предупреждение компилятора (уровень 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|контрольные точки pragma с плавающей запятой игнорируются в/CLR|
 |[Предупреждение компилятора (уровень 4) C4471](compiler-warning-level-4-c4471.md)|"*перечисление*": в прямом объявлении неограниченного перечисления должен присутствовать базовый тип (предполагается int)|
 |Предупреждение компилятора (уровень 1) C4472|"*идентификатор*" является машинным перечислением: Добавьте описатель доступа (private или public), чтобы объявить перечисление "WinRT&#124;Managed"|

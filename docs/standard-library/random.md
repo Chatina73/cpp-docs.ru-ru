@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 4080e305620dbe4b8fa1674762c27ece4eccd0a1
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 85c2facebec49c4f15fb4a8705b672e677df926c
+ms.sourcegitcommit: 6d2a4ab362b657d17ce1cb336b22b5454dc2bc7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97337966"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107721347"
 ---
-# <a name="ltrandomgt"></a>&lt;random&gt;
+# `<random>`
 
 Определяет средства для генерации случайных чисел с равномерным распределением.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок**: \<random>
+**Заголовок**: `<random>`
 
 **Пространство имен:** std
 
 > [!NOTE]
-> \<random>Библиотека использует инструкцию "#include <initializer_list>".
+> `<random>`Библиотека использует инструкцию "#include <initializer_list>".
 
 ## <a name="summary"></a>Сводка
 
@@ -43,9 +43,9 @@ ms.locfileid: "97337966"
 
 ### <a name="quick-tips"></a>Краткие советы
 
-Вот несколько советов по использованию \<random>.
+Вот несколько советов по использованию `<random>`.
 
-- В большинстве случаев РГСЧ формируют необработанные значения, которые упорядочиваются распределением. (Исключением служит функция [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), так как она использует РГСЧ напрямую.)
+- В большинстве случаев РГСЧ формируют необработанные значения, которые упорядочиваются распределением. (Заметным исключением является то, [`std::shuffle()`](../standard-library/algorithm-functions.md#shuffle) что оно напрямую использует ргсч.)
 
 - Один экземпляр РГСЧ или распределения не может безопасно вызываться параллельно, так как использование РГСЧ или распределения — это операция изменения. Дополнительные сведения см. в разделе [Потоковая безопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md).
 
@@ -53,7 +53,7 @@ ms.locfileid: "97337966"
 
 - Самое полезное сочетание для большинства приложений — это механизм `mt19937` с `uniform_int_distribution`, как показано в [примере кода](#code) далее в этой статье.
 
-В заголовке можно выбрать различные варианты \<random>; любой из них предпочтительнее устаревшей функции библиотеки времени выполнения C `rand()`. Для информации о недостатках `rand()` и о том, как \<random> работает с этими недостатками, см. [это видео](https://go.microsoft.com/fwlink/p/?linkid=397615).
+В заголовке можно выбрать различные варианты `<random>`; любой из них предпочтительнее устаревшей функции библиотеки времени выполнения C `rand()`. Для информации о недостатках `rand()` и о том, как `<random>` работает с этими недостатками, см. [это видео](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="examples"></a><a name="code"></a> Примеры
 
@@ -222,11 +222,11 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 3. **Качество**: насколько полученная последовательность близка к реальным случайным числам. Часто это называется "*стохастичностью*".
 
-В следующих разделах перечислены РГСЧ, доступные в заголовке \<random>.
+В следующих разделах перечислены РГСЧ, доступные в заголовке `<random>`.
 
 #### <a name="non-deterministic-generator"></a><a name="rd"></a> Недетерминистический генератор
 
-[Класс random_device](../standard-library/random-device-class.md)\
+[`random_device` См](../standard-library/random-device-class.md)\
 Формирует недетерминистическую, криптографическую безопасную случайную последовательность с помощью внешнего устройства. Обычно используется для получения начального значения для механизма случайных чисел. Низкая производительность, очень высокое качество. Дополнительные сведения см. в разделе [Примечания](#comments).
 
 #### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Определения типа механизма с предварительно заданными параметрами
@@ -311,9 +311,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |Имя|Описание|
 |-|-|
-|[Класс linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)|Создает случайную последовательность, используя линейный конгруэнтный алгоритм. Самый простой с самым низким качеством.|
-|[Класс mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)|Создает случайную последовательность, используя алгоритм "Вихрь Мерсенна". Самый сложный с самым высоким качеством (кроме класса random_device). Очень высокая производительность.|
-|[Класс subtract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)|Создает случайную последовательность, используя алгоритм вычитания с переносом. Улучшение `linear_congruential_engine`, но с более низким качеством и производительностью, чем у `mersenne_twister_engine`.|
+|[`linear_congruential_engine` См](../standard-library/linear-congruential-engine-class.md)|Создает случайную последовательность, используя линейный конгруэнтный алгоритм. Самый простой с самым низким качеством.|
+|[`mersenne_twister_engine` См](../standard-library/mersenne-twister-engine-class.md)|Создает случайную последовательность, используя алгоритм "Вихрь Мерсенна". Самый сложный с самым высоким качеством (кроме класса random_device). Очень высокая производительность.|
+|[`subtract_with_carry_engine` См](../standard-library/subtract-with-carry-engine-class.md)|Создает случайную последовательность, используя алгоритм вычитания с переносом. Улучшение `linear_congruential_engine`, но с более низким качеством и производительностью, чем у `mersenne_twister_engine`.|
 
 #### <a name="engine-adaptor-templates"></a><a name="engadapt"></a> Шаблоны адаптеров механизмов
 
@@ -321,23 +321,23 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |Имя|Описание|
 |-|-|
-|[Класс discard_block_engine](../standard-library/discard-block-engine-class.md)|Создает случайную последовательность, удаляя значения, возвращенные базовым механизмом.|
-|[Класс independent_bits_engine](../standard-library/independent-bits-engine-class.md)|Создает случайную последовательность с указанным числом разрядов, перемешивая разряды из значений, возвращенных базовым механизмом.|
-|[Класс shuffle_order_engine](../standard-library/shuffle-order-engine-class.md)|Создает случайную последовательность, изменяя порядок значений, возвращенных базовым механизмом.|
+|[`discard_block_engine` См](../standard-library/discard-block-engine-class.md)|Создает случайную последовательность, удаляя значения, возвращенные базовым механизмом.|
+|[`independent_bits_engine` См](../standard-library/independent-bits-engine-class.md)|Создает случайную последовательность с указанным числом разрядов, перемешивая разряды из значений, возвращенных базовым механизмом.|
+|[`shuffle_order_engine` См](../standard-library/shuffle-order-engine-class.md)|Создает случайную последовательность, изменяя порядок значений, возвращенных базовым механизмом.|
 
 [[Шаблоны подсистемы](#eng)]
 
 ### <a name="random-number-distributions"></a><a name="distributions"></a> Распределения случайных чисел
 
-В следующих разделах перечислены распределения, доступные в заголовке \<random>. Распределения — это механизмы постобработки, которые обычно используют результаты РГСЧ в качестве входа и распределяют выходные данные с помощью заданной функции плотности статистической вероятности. Дополнительные сведения см. в разделе [Механизмы и распределения](#engdist).
+В следующих разделах перечислены распределения, доступные в заголовке `<random>`. Распределения — это механизмы постобработки, которые обычно используют результаты РГСЧ в качестве входа и распределяют выходные данные с помощью заданной функции плотности статистической вероятности. Дополнительные сведения см. в разделе [Механизмы и распределения](#engdist).
 
 #### <a name="uniform-distributions"></a>Равномерные распределения
 
 |Имя|Описание|
 |-|-|
-|[Класс uniform_int_distribution](../standard-library/uniform-int-distribution-class.md)|Формирует равномерное распределение целых чисел в диапазоне, заданном замкнутым интервалом \[a, b] (a и b входят в диапазон).|
-|[Класс uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)|Формирует равномерное распределение вещественных чисел (с плавающей запятой) в диапазоне, заданном полузамкнутым интервалом [a, b) (a включено, b не входит в диапазон).|
-|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Формирует равномерное распределение вещественных чисел (с плавающей запятой) с заданной точностью в диапазоне [0, 1) (0 входит в диапазон, 1 не входит).|
+|[`uniform_int_distribution` См](../standard-library/uniform-int-distribution-class.md)|Формирует равномерное распределение целых чисел в диапазоне, заданном замкнутым интервалом \[a, b] (a и b входят в диапазон).|
+|[`uniform_real_distribution` См](../standard-library/uniform-real-distribution-class.md)|Формирует равномерное распределение вещественных чисел (с плавающей запятой) в диапазоне, заданном полузамкнутым интервалом [a, b) (a включено, b не входит в диапазон).|
+|[`generate_canonical`](../standard-library/random-functions.md#generate_canonical)|Формирует равномерное распределение вещественных чисел (с плавающей запятой) с заданной точностью в диапазоне [0, 1) (0 входит в диапазон, 1 не входит).|
 
 [[Распределения случайных чисел](#distributions)]
 
@@ -345,10 +345,10 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |Имя|Описание|
 |-|-|
-|[Класс bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Создает распределение Бернулли **`bool`** значений.|
-|[Класс binomial_distribution](../standard-library/binomial-distribution-class.md)|Формирует биномиальное распределение целых значений.|
-|[Класс geometric_distribution](../standard-library/geometric-distribution-class.md)|Формирует геометрическое распределение целых значений.|
-|[Класс negative_binomial_distribution](../standard-library/negative-binomial-distribution-class.md)|Формирует отрицательное биномиальное распределение целых значений.|
+|[`bernoulli_distribution` См](../standard-library/bernoulli-distribution-class.md)|Создает распределение Бернулли **`bool`** значений.|
+|[`binomial_distribution` См](../standard-library/binomial-distribution-class.md)|Формирует биномиальное распределение целых значений.|
+|[`geometric_distribution` См](../standard-library/geometric-distribution-class.md)|Формирует геометрическое распределение целых значений.|
+|[`negative_binomial_distribution` См](../standard-library/negative-binomial-distribution-class.md)|Формирует отрицательное биномиальное распределение целых значений.|
 
 [[Распределения случайных чисел](#distributions)]
 
@@ -356,12 +356,12 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |Имя|Описание|
 |-|-|
-|[Класс cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Формирует распределение Коши вещественных значений (с плавающей запятой).|
-|[Класс chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Формирует распределение хи-квадрат вещественных значений (с плавающей запятой).|
-|[Класс fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Создает F-распределение (также известное как Снедекора F Distribution или распределение Fisher-Snedecor) реальных значений (с плавающей запятой).|
-|[Класс lognormal_distribution](../standard-library/lognormal-distribution-class.md)|Формирует логарифмически нормальное распределение вещественных значений (с плавающей запятой).|
-|[Класс normal_distribution](../standard-library/normal-distribution-class.md)|Формирует нормальное (Гауссово) распределение вещественных значений (с плавающей запятой).|
-|[Класс student_t_distribution](../standard-library/student-t-distribution-class.md)|Формирует *t*-распределение Стьюдента вещественных значений (с плавающей запятой).|
+|[`cauchy_distribution` См](../standard-library/cauchy-distribution-class.md)|Формирует распределение Коши вещественных значений (с плавающей запятой).|
+|[`chi_squared_distribution` См](../standard-library/chi-squared-distribution-class.md)|Формирует распределение хи-квадрат вещественных значений (с плавающей запятой).|
+|[`fisher_f_distribution` См](../standard-library/fisher-f-distribution-class.md)|Создает F-распределение (также известное как Снедекора F Distribution или распределение Fisher-Snedecor) реальных значений (с плавающей запятой).|
+|[`lognormal_distribution` См](../standard-library/lognormal-distribution-class.md)|Формирует логарифмически нормальное распределение вещественных значений (с плавающей запятой).|
+|[`normal_distribution` См](../standard-library/normal-distribution-class.md)|Формирует нормальное (Гауссово) распределение вещественных значений (с плавающей запятой).|
+|[`student_t_distribution` См](../standard-library/student-t-distribution-class.md)|Формирует *t*-распределение Стьюдента вещественных значений (с плавающей запятой).|
 
 [[Распределения случайных чисел](#distributions)]
 
@@ -369,11 +369,11 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |Имя|Описание|
 |-|-|
-|[Класс exponential_distribution](../standard-library/exponential-distribution-class.md)|Формирует экспоненциальное распределение вещественных значений (с плавающей запятой).|
-|[Класс extreme_value_distribution](../standard-library/extreme-value-distribution-class.md)|Формирует распределение экстремальных вещественных значений (с плавающей запятой).|
-|[Класс gamma_distribution](../standard-library/gamma-distribution-class.md)|Формирует гамма-распределение вещественных значений (с плавающей запятой).|
-|[Класс poisson_distribution](../standard-library/poisson-distribution-class.md)|Формирует распределение Пуассона целых значений.|
-|[Класс weibull_distribution](../standard-library/weibull-distribution-class.md)|Формирует распределение Вейбулла вещественных значений (с плавающей запятой).|
+|[`exponential_distribution` См](../standard-library/exponential-distribution-class.md)|Формирует экспоненциальное распределение вещественных значений (с плавающей запятой).|
+|[`extreme_value_distribution` См](../standard-library/extreme-value-distribution-class.md)|Формирует распределение экстремальных вещественных значений (с плавающей запятой).|
+|[`gamma_distribution` См](../standard-library/gamma-distribution-class.md)|Формирует гамма-распределение вещественных значений (с плавающей запятой).|
+|[`poisson_distribution` См](../standard-library/poisson-distribution-class.md)|Формирует распределение Пуассона целых значений.|
+|[`weibull_distribution` См](../standard-library/weibull-distribution-class.md)|Формирует распределение Вейбулла вещественных значений (с плавающей запятой).|
 
 [[Распределения случайных чисел](#distributions)]
 
@@ -381,23 +381,23 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |Имя|Описание|
 |-|-|
-|[Класс discrete_distribution](../standard-library/discrete-distribution-class.md)|Формирует дискретное распределение целых чисел.|
-|[Класс piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md)|Формирует кусочно-постоянное распределение вещественных значений (с плавающей запятой).|
-|[Класс piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)|Формирует кусочно-линейное распределение вещественных значений (с плавающей запятой).|
+|[`discrete_distribution` См](../standard-library/discrete-distribution-class.md)|Формирует дискретное распределение целых чисел.|
+|[`piecewise_constant_distribution` См](../standard-library/piecewise-constant-distribution-class.md)|Формирует кусочно-постоянное распределение вещественных значений (с плавающей запятой).|
+|[`piecewise_linear_distribution` См](../standard-library/piecewise-linear-distribution-class.md)|Формирует кусочно-линейное распределение вещественных значений (с плавающей запятой).|
 
 [[Распределения случайных чисел](#distributions)]
 
 ### <a name="utility-functions"></a>Служебные функции
 
-В этом разделе перечислены основные служебные функции, доступные в заголовке \<random>.
+В этом разделе перечислены основные служебные функции, доступные в заголовке `<random>`.
 
 |Имя|Описание|
 |-|-|
-|[Класс seed_seq](../standard-library/seed-seq-class.md)|Создает шифрованную порождающую последовательность без смещения. Используется для предотвращения повтора потоков случайных чисел. Полезно, если на основе механизмов инициализируется множество РГСЧ.|
+|[`seed_seq` См](../standard-library/seed-seq-class.md)|Создает шифрованную порождающую последовательность без смещения. Используется для предотвращения повтора потоков случайных чисел. Полезно, если на основе механизмов инициализируется множество РГСЧ.|
 
 ### <a name="operators"></a>Операторы
 
-В этом разделе перечислены операторы, доступные в заголовке \<random>.
+В этом разделе перечислены операторы, доступные в заголовке `<random>`.
 
 |Имя|Описание|
 |-|-|
@@ -408,7 +408,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ## <a name="engines-and-distributions"></a><a name="engdist"></a> Механизмы и дистрибутивы
 
-Сведения о каждой из этих категорий шаблонов классов, определенных в, см. в следующих разделах \<random> . Обе эти категории шаблонов классов принимают тип в качестве аргумента и используют имена общих параметров шаблона для описания свойств типа, которые разрешены в качестве фактического типа аргумента, следующим образом:
+Сведения о каждой из этих категорий шаблонов классов, определенных в, см. в следующих разделах `<random>` . Обе эти категории шаблонов классов принимают тип в качестве аргумента и используют имена общих параметров шаблона для описания свойств типа, которые разрешены в качестве фактического типа аргумента, следующим образом:
 
 - `IntType` Указывает **`short`** , **`int`** ,, **`long`** **`long long`** , **`unsigned short`** , **`unsigned int`** , **`unsigned long`** или **`unsigned long long`** .
 
@@ -434,7 +434,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 - `void seed(result_type s)` задает для генератора начальное значение `s`. Для механизмов используется сигнатура `void seed(result_type s = default_seed)` для поддержки параметров по умолчанию (в адаптерах механизмов определена отдельная функция `void seed()`, как показано далее).
 
-- `template <class Seq> void seed(Seq& q)`заполняет генератор с помощью [seed_seq](../standard-library/seed-seq-class.md) `Seq` .
+- `template <class Seq> void seed(Seq& q)`заполняет генератор с помощью [`seed_seq`](../standard-library/seed-seq-class.md) `Seq` .
 
 - Явный конструктор с аргументом `result_type x`, который создает генератор, начальное значение которого определяется так же, как при вызове функции `seed(x)`.
 
@@ -496,7 +496,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 В Visual Studio есть два очень полезных РГСЧ — `mt19937` и `random_device`, которые показаны в следующей таблице.
 
-|РГСЧ|быстрый;|Криптобезопасный|С начальным значением|Детерминированный|
+|РГСЧ|Быстрый|Криптобезопасный|С начальным значением|Детерминированное|
 |----------|-----------|---------------------|---------------|--------------------|
 |`mt19937`|Да|Нет|Да|Да<sup>*</sup>|
 |`random_device`|Нет|Да|Нет|Нет|

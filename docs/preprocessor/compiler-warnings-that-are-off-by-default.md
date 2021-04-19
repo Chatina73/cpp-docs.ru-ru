@@ -6,12 +6,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 2178d62318cfc70fd7ec9805999bafb9a61c18cf
-ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
+ms.openlocfilehash: ec65eba6c6af948b25e35186967b51c52fe65dac
+ms.sourcegitcommit: 6d2a4ab362b657d17ce1cb336b22b5454dc2bc7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107576915"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107721360"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Предупреждения компилятора, выключенные по умолчанию
 
@@ -70,7 +70,7 @@ ms.locfileid: "107576915"
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (уровень 4)|"*Class1*": макет объекта в/vd2 будет изменен из-за виртуального базового "*Class2*"|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (уровень 4)|dynamic_cast из виртуального базового "*Class1*" в "*Class2*" может произойти сбой в некоторых контекстах|
 |C4444 (уровень 3)|директива верхнего уровня "__unaligned" не реализована в этом контексте|
-|[C4464](../error-messages/compiler-warnings/c4464.md) (уровень 4)|относительный путь включения содержит ".."|
+|[C4464](../error-messages/compiler-warnings/compiler-warning-level-4-c4464.md) (уровень 4)|относительный путь включения содержит ".."|
 |[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) (уровень 4)|в прямом объявлении неограниченного перечисления должен присутствовать базовый тип (предполагается использование <sup>int)</sup>|
 |C4472 (уровень 1)|"*идентификатор*" является машинным перечислением: Добавьте спецификатор доступа (частный или открытый) для объявления управляемого перечисления|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (уровень 4)|"*функция*": нессылочная встроенная функция удалена|

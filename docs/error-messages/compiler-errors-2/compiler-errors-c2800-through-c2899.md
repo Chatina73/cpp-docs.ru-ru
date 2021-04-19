@@ -43,12 +43,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 65455224744b4463bdb919e488b34530274fa547
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d93e0fbdba186695e543ca8fe4928065e2be7cc1
+ms.sourcegitcommit: 6d2a4ab362b657d17ce1cb336b22b5454dc2bc7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97238795"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107721420"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Ошибки компилятора с C2800 по C2899
 
@@ -164,4 +164,4 @@ ms.locfileid: "97238795"
 ## <a name="see-also"></a>См. также раздел
 
 [Ошибки и предупреждения для компилятора C/C++ и средств сборки](../compiler-errors-1/c-cpp-build-errors.md) \
-[Ошибки компилятора с C2000 по C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
+[Ошибки компилятора C2000-C3999, C7000-C7999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

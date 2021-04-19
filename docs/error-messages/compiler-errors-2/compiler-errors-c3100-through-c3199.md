@@ -67,12 +67,12 @@ helpviewer_keywords:
 - C3191
 - C3193
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
-ms.openlocfilehash: d2398fa8ae783a34662efc361730a5054a982458
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 5e24666ed69acef5a1bced76fe4730c371964b78
+ms.sourcegitcommit: 6d2a4ab362b657d17ce1cb336b22b5454dc2bc7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97238717"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107721853"
 ---
 # <a name="compiler-errors-c3100-through-c3199"></a>Ошибки компилятора с C3100 по C3199
 
@@ -151,7 +151,7 @@ ms.locfileid: "97238717"
 |Ошибка компилятора C3164|Является устаревшей.|
 |Ошибка компилятора C3165|"*значение*": невозможно преобразовать в целое число или значение с плавающей запятой|
 |[Ошибка компилятора C3166](compiler-error-c3166.md)|Является устаревшей. "*тип*": член данных управляемого класса/WinRT не может иметь тип "*pointer_type* для внутреннего *managed_pointer_type*"|
-|[Ошибка компилятора C3167](compiler-error-c3167.md)|Не удалось инициализировать .NET Framework: Убедитесь, что он установлен|
+|[Ошибка компилятора C3167](compiler-error-c3167.md)|Не удалось инициализировать платформа .NET Framework: Убедитесь, что он установлен|
 |[Ошибка компилятора C3168](compiler-error-c3168.md)|"*тип*": недопустимый базовый тип для перечисления|
 |Ошибка компилятора C3169|"*тип*": невозможно вывести тип для "Auto" из "*тип*"|
 |[Ошибка компилятора C3170](compiler-error-c3170.md)|в проекте не могут быть разные идентификаторы модулей|
@@ -188,4 +188,4 @@ ms.locfileid: "97238717"
 ## <a name="see-also"></a>См. также раздел
 
 [Ошибки и предупреждения для компилятора C/C++ и средств сборки](../compiler-errors-1/c-cpp-build-errors.md) \
-[Ошибки компилятора с C2000 по C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
+[Ошибки компилятора C2000-C3999, C7000-C7999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
