@@ -1,159 +1,133 @@
 ---
 description: 'Дополнительные сведения: _variant_t:: operator ='
-title: _variant_t::operator =
-ms.date: 11/04/2016
+title: '_variant_t:: operator ='
+ms.date: 03/23/2021
 f1_keywords:
 - _variant_t::operator=
 helpviewer_keywords:
 - operator= [C++], variant
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
-ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: a304f0904f697ade7d04c6d12f375571a156e989
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: c1cd581b386a3cf5d551fe8341ba588fc56b9c2e
+ms.sourcegitcommit: bb35a6c22d896c4640cff00a7321442c544ca219
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97161472"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105744768"
 ---
-# <a name="_variant_toperator-"></a>_variant_t::operator =
+# `_variant_t::operator=`
 
-**Блок, относящийся только к системам Microsoft**
+Присваивает новое значение `_variant_t` экземпляру.
+
+`_variant_t`Класс и его `operator=` член являются **специфичными для Microsoft**.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-_variant_t& operator=(
-   const VARIANT& varSrc
-);
-
-_variant_t& operator=(
-   const VARIANT* pVarSrc
-);
-
-_variant_t& operator=(
-   const _variant_t& var_t_Src
-);
-
-_variant_t& operator=(
-   short sSrc
-);
-
-_variant_t& operator=(
-   long lSrc
-);
-
-_variant_t& operator=(
-   float fltSrc
-);
-
-_variant_t& operator=(
-   double dblSrc
-);
-
-_variant_t& operator=(
-   const CY& cySrc
-);
-
-_variant_t& operator=(
-   const _bstr_t& bstrSrc
-);
-
-_variant_t& operator=(
-   const wchar_t* wstrSrc
-);
-
-_variant_t& operator=(
-   const char* strSrc
-);
-
-_variant_t& operator=(
-   IDispatch* pDispSrc
-);
-
-_variant_t& operator=(
-   bool bSrc
-);
-
-_variant_t& operator=(
-   IUnknown* pSrc
-);
-
-_variant_t& operator=(
-   const DECIMAL& decSrc
-);
-
-_variant_t& operator=(
-   BYTE bSrc
-);
-
-_variant_t& operator=(
-   char cSrc
-);
-
-_variant_t& operator=(
-   unsigned short usSrc
-);
-
-_variant_t& operator=(
-   unsigned long ulSrc
-);
-
-_variant_t& operator=(
-   int iSrc
-);
-
-_variant_t& operator=(
-   unsigned int uiSrc
-);
-
-_variant_t& operator=(
-   __int64 i8Src
-);
-
-_variant_t& operator=(
-   unsigned __int64 ui8Src
-);
+```cpp
+_variant_t& operator=( const VARIANT& varSrc );
+_variant_t& operator=( const VARIANT* pVarSrc );
+_variant_t& operator=( const _variant_t& var_t_Src );
+_variant_t& operator=( short sSrc );
+_variant_t& operator=( long lSrc );
+_variant_t& operator=( float fltSrc );
+_variant_t& operator=( double dblSrc );
+_variant_t& operator=( const CY& cySrc );
+_variant_t& operator=( const _bstr_t& bstrSrc );
+_variant_t& operator=( const wchar_t* wstrSrc );
+_variant_t& operator=( const char* strSrc );
+_variant_t& operator=( IDispatch* pDispSrc );
+_variant_t& operator=( bool bSrc );
+_variant_t& operator=( IUnknown* pSrc );
+_variant_t& operator=( const DECIMAL& decSrc );
+_variant_t& operator=( BYTE byteSrc );
+_variant_t& operator=( char cSrc );
+_variant_t& operator=( unsigned short usSrc );
+_variant_t& operator=( unsigned long ulSrc );
+_variant_t& operator=( int iSrc );
+_variant_t& operator=( unsigned int uiSrc );
+_variant_t& operator=( __int64 i8Src );
+_variant_t& operator=( unsigned __int64 ui8Src );
 ```
 
-## <a name="remarks"></a>Remarks
+### <a name="parameters"></a>Параметры
 
-Оператор присваивает новое значение объекту `_variant_t`.
+*`varSrc`*\
+Ссылка на объект, `VARIANT` из которого копируются содержимое и `VT_*` тип.
 
-- **operator = (**  *варсрк*  **)** Присваивает существующий `VARIANT` `_variant_t` объект объекту.
+*`pVarSrc`*\
+Указатель на объект, `VARIANT` из которого копируются содержимое и `VT_*` тип.
 
-- **operator = (**  *пварсрк*  **)** Присваивает существующий `VARIANT` `_variant_t` объект объекту.
+*`var_t_Src`*\
+Ссылка на объект, `_variant_t` из которого копируются содержимое и `VT_*` тип.
 
-- **operator = (**  *var_t_Src*  **)** Присваивает существующий `_variant_t` объект `_variant_t` объекту.
+*`sSrc`*\
+**`short`** Целочисленное значение для копирования. Заданный тип, `VT_BOOL` Если `*this` имеет тип `VT_BOOL` . В противном случае задается тип `VT_I2` .
 
-- **operator = (**  *ССРК*  **)** Присваивает **`short`** целочисленное значение `_variant_t` объекту.
+*`lSrc`*\
+**`long`** Целочисленное значение для копирования. Заданный тип, `VT_BOOL` Если `*this` имеет тип `VT_BOOL` . Заданный тип, `VT_ERROR` Если `*this` имеет тип `VT_ERROR` . В противном случае заданный тип `VT_I4` .
 
-- **operator = (** `lSrc` **)** присваивает **`long`** объекту целочисленное значение `_variant_t` .    
+*`fltSrc`*\
+**`float`** Числовое значение для копирования. Заданный тип `VT_R4` .
 
-- **operator = (**  *флтсрк*  **)** Присваивает **`float`** числовое значение `_variant_t` объекту.
+*`dblSrc`*\
+**`double`** Числовое значение для копирования. Заданный тип, `VT_DATE` Если `this` имеет тип `VT_DATE` . В противном случае заданный тип `VT_R8` .
 
-- **operator = (**  *дблсрк*  **)** Присваивает **`double`** числовое значение `_variant_t` объекту.
+*`cySrc`*\
+Объект `CY` для копирования. Заданный тип `VT_CY` .
 
-- **operator = (**  *цисрк*  **)** Присваивает объект объекту `CY` `_variant_t` .
+*`bstrSrc`*\
+Объект `BSTR` для копирования. Заданный тип `VT_BSTR` .
 
-- **operator = (**  *бстрсрк*  **)** Присваивает объект объекту `BSTR` `_variant_t` .
+*`wstrSrc`*\
+Строка в Юникоде для копирования, хранимая как `BSTR` и заданный тип `VT_BSTR` .
 
-- **operator = (**  *встрсрк*  **)** Присваивает строку Юникода `_variant_t` объекту.
+*`strSrc`*\
+Многобайтовая строка для копирования, хранимая как `BSTR` и заданный тип `VT_BSTR` .
 
-- **operator = (** `strSrc` **)** присваивает объекту многобайтовую строку `_variant_t` .    
+*`pDispSrc`*\
+`IDispatch`Указатель, который нужно скопировать с помощью вызова `AddRef` . Заданный тип `VT_DISPATCH` .
 
-- **operator = (** `bSrc` **)** присваивает **`bool`** значение `_variant_t` объекту.  
+*`bSrc`*\
+**`bool`** Копируемое значение. Заданный тип `VT_BOOL` .
 
-- **operator = (**  *пдиспсрк*  **)** Присваивает объект объекту `VT_DISPATCH` `_variant_t` .
+*`pSrc`*\
+`IUnknown`Указатель, который нужно скопировать с помощью вызова `AddRef` . Заданный тип  `VT_UNKNOWN` .
 
-- **operator = (**  *пиункновнсрк*  **)** Присваивает объект объекту `VT_UNKNOWN` `_variant_t` .
+*`decSrc`*\
+Объект `DECIMAL` для копирования. Заданный тип `VT_DECIMAL` .
 
-- **operator = (**  *дексрк*  **)** Присваивает `DECIMAL` значение `_variant_t` объекту.
+*`byteSrc`*\
+`BYTE`Копируемое значение. Заданный тип `VT_UI1` .
 
-- **operator = (** `bSrc` **)** присваивает `BYTE` значение `_variant_t` объекту.  
+*`cSrc`*\
+**`char`** Копируемое значение. Заданный тип `VT_I1` .
 
-**Завершение блока, относящегося только к системам Майкрософт**
+*`usSrc`*\
+**`unsigned short`** Копируемое значение. Заданный тип `VT_UI2` .
+
+*`ulSrc`*\
+**`unsigned long`** Копируемое значение. Заданный тип `VT_UI4` .
+
+*`iSrc`*\
+**`int`** Копируемое значение. Заданный тип `VT_INT` .
+
+*`uiSrc`*\
+**`unsigned int`** Копируемое значение. Заданный тип `VT_UINT` .
+
+*`i8Src`*\
+**`__int64`** **`long long`** Копируемое значение или. Заданный тип `VT_I8` .
+
+*`ui8Src`*\
+**`unsigned __int64`** **`unsigned long long`** Копируемое значение или. Заданный тип `VT_UI8` .
+
+## <a name="remarks"></a>Замечания
+
+`operator=`Оператор присваивания очищает любое существующее значение, которое удаляет типы объектов или вызывает `Release` `IDispatch*` `IUnknown*` типы и. Затем он копирует новое значение в `_variant_t` объект. Он изменяет `_variant_t` тип так, чтобы он соответствовал назначенному значению, за исключением случаев, указанных для **`short`** **`long`** аргументов, и **`double`** . Типы значений копируются напрямую. `VARIANT`Указатель или `_variant_t` ссылочный аргумент или копирует содержимое и тип назначенного объекта. Другие аргументы указателя или ссылочного типа создают копию назначенного объекта. Оператор присваивания вызывает `AddRef` `IDispatch*` аргументы и `IUnknown*` .
+
+`operator=` вызывается [`_com_raise_error`](../cpp/com-raise-error.md) при возникновении ошибки.
+
+`operator=` Возвращает ссылку на обновленный `_variant_t` объект.
 
 ## <a name="see-also"></a>См. также
 
-[Класс _variant_t](../cpp/variant-t-class.md)
+[Класс `_variant_t`](../cpp/variant-t-class.md)

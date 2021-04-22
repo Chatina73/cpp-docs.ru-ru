@@ -67,12 +67,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: 7ec25f60c508464abf8232419f8867bc3f0a20fb
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 82e8180b21a0de19134673d362989b4ca371dbc2
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97299349"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099343"
 ---
 # <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -136,7 +136,7 @@ int _wutime64(
 
 Структура **_utimbuf** сохраняет доступ к файлам и время изменения, используемые **_utime** для изменения дат изменения файлов. Структура содержит следующие поля, которые относятся к типу **time_t**:
 
-| Поле |   |
+| Поле | Описание |
 |-------|---|
 | **актиме** | Время доступа к файлу |
 | **модтиме** | Время изменения файла |
@@ -240,7 +240,7 @@ Directory of C:\test
 
 ## <a name="see-also"></a>См. также раздел
 
-[Операции управления временем](../../c-runtime-library/time-management.md)<br/>
+[Управление временем](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>

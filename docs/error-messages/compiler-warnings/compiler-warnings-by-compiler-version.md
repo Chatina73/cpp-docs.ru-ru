@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 1fdc4f79a7ae3cd45b66cb312a9297754acfc964
-ms.sourcegitcommit: 1f85841f403e76d041c34a7c77089dab389960a2
+ms.openlocfilehash: 5dd869e7c6fd53e9d68a26c18bdb458a258d3dea
+ms.sourcegitcommit: bf6d8a220f6392f1f19c0c0605d1467d0221ef6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518821"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551778"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Предупреждения компилятора по версии компилятора
 
@@ -22,7 +22,7 @@ ms.locfileid: "94518821"
 |--|--|
 | Visual Studio 2002 | 13.00.9466 |
 | Visual Studio 2003 | 13.10.3077 |
-| Visual Studio 2005 | 14.00.50727.762 |
+| Visual Studio 2005 | 14.00.50727.762 |
 | Visual Studio 2008 | 15.00.21022.08 |
 | Visual Studio 2010 | 16.00.40219.01 |
 | Visual Studio 2012 | 17.00.51106.1 |
@@ -46,12 +46,41 @@ ms.locfileid: "94518821"
 | Visual Studio 2019, версия 16.5 | 19.25.28610.0 |
 | Visual Studio 2019 версии 16.6 | 19.26.28805.0 |
 | Visual Studio 2019 версии 16.7 | 19.27.29112.0 |
+| Visual Studio 2019 версии 16.8 | 19.28.29330.0 |
+| Visual Studio 2019 версии 16,9 | 19.28.29500.0 |
 
 Для параметра можно указать только основной номер, основной и дополнительный номера, а также номера основной, дополнительный и номер сборки **`/Wv`** . Компилятор сообщает обо всех предупреждениях, соответствующих версиям, начинающимся с указанного числа. Он подавляет все предупреждения для версий, превышающих указанное число. Например, **`/Wv:17`** сообщает о предупреждениях, введенных в или до любой версии Visual Studio 2012, и подавляет предупреждения, появившиеся компилятором Visual Studio 2013 (версия 18) или более поздней версии. Чтобы отключить предупреждения, появившиеся в Visual Studio 2015 с обновлением 2 и более поздних версий, можно использовать **`/Wv:19.00.23506`** . Используйте **`/Wv:19.11`** , чтобы сообщать о предупреждениях, появившихся в любой версии Visual Studio, до Visual studio 2017 версии 15,5, но отключать предупреждения, появившиеся в Visual studio 2017 версии 15,5 и более поздних.
 
 В следующих разделах перечислены предупреждения, появившиеся в каждой версии Visual C++, которые можно подавлять с помощью **`/Wv`** параметра компилятора. **`/Wv`** Параметр не может отключить предупреждения, которые отсутствуют в списке, что указывает на то, что указанные версии компилятора являются датами.
 
 ::: moniker range=">= msvc-160"
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-169-compiler-version-1928297000"></a>Предупреждения, появившиеся в Visual Studio 2019 версии 16,9 (компилятор версии 19.28.29700.0)
+
+Эти предупреждения и все предупреждения в более поздних версиях подавляются с помощью параметра компилятора **`/Wv:19.28.29500`** .
+
+| Предупреждение | Сообщение |
+|--|--|
+| C5232 | `in C++20 this comparison calls 'identifier' recursively` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-168-compiler-version-1928293300"></a>Предупреждения, появившиеся в Visual Studio 2019 версии 16,8 (компилятор версии 19.28.29330.0)
+
+Эти предупреждения и все предупреждения в более поздних версиях подавляются с помощью параметра компилятора **`/Wv:19.27`** .
+
+| Предупреждение | Сообщение |
+|--|--|
+| C5072 | `ASAN enabled without debug information emission. Enable debug info for better ASAN error reporting` |
+| C5211 | `'keyword-1' has been deprecated; prefer using 'keyword-2' instead` |
+| C5222 | `'attribute-name': all unscoped attribute names are reserved for future standardization` |
+| C5223 | `all attribute names in the attribute namespace 'msvc' are reserved for the implementation` |
+| C5224 | `all attribute names in the attribute namespace 'a-namespace' are reserved for future standardization` |
+| C5225 | `'symbol': exported inline function defined in a private module fragment is a non-standard extension` |
+| C5226 | `'symbol': exported template defined in private module fragment has no reachable instantiation` |
+| C5227 | `nonstandard extension, resolved 'symbol' to 'instance' which is not visible with /permissive- on.` |
+| C5228 | `nonstandard extension, 'identifier' resolved to a member of a dependent base. This lookup is not allowed under /permissive-.` |
+| C5229 | `nonstandard extension, the hidden friend function 'function-name' was found by name lookup which isn't allowed under /permissive-.` |
+| C5230 | `nonstandard extension, 'identifier' was resolved to 'symbol' under /permissive. Under /permissive- it would resolve to 'other-symbol'.` |
+| C5231 | `the expression 'co_await promise.final_suspend()' must be non-throwing`)
 
 ## <a name="warnings-introduced-in-visual-studio-2019-version-167-compiler-version-1927291120"></a>Предупреждения, появившиеся в Visual Studio 2019 версии 16,7 (компилятор версии 19.27.29112.0)
 
@@ -102,7 +131,7 @@ ms.locfileid: "94518821"
 
 | Предупреждение | Сообщение |
 |--|--|
-| C5200 | `feature 'feature-name' requires compiler flag 'option-name'` | Предупреждение, эквивалентное C2429 для функций языка
+| C5200 | `feature 'feature-name' requires compiler flag 'option-name'` |
 | C5201 | `a module declaration can appear only at the start of a translation unit unless a global module fragment is used` |
 | C5202 | `a global module fragment can only contain preprocessor directives` |
 | C5203 | `a parenthesized declarator name after 'explicit' will be considered an explicit-specifier in C++20` |

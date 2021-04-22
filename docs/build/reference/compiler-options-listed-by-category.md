@@ -5,12 +5,12 @@ ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: b892575719d97ed4a0acb061aae0182ff2d576eb
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: e527e5ef309b4ea4e0a38189d7855475b99762f2
+ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465383"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107381211"
 ---
 # <a name="compiler-options-listed-by-category"></a>Параметры компилятора, упорядоченные по категориям
 
@@ -110,6 +110,18 @@ ms.locfileid: "102465383"
 | [`/u`](u-u-undefine-symbols.md) | Удаляет все предварительно определенные макросы. |
 | [`/X`](x-ignore-standard-include-paths.md) | Пропускает стандартный каталог включаемых файлов. |
 
+## <a name="header-units"></a>Единицы заголовков
+
+| Параметр | Цель |
+|--|--|
+| [`/exportHeader`](module-exportheader.md) | Создайте файлы единиц заголовков ( *`.ifc`* ), заданные входными аргументами. |
+| [`/headerUnit`](headerunit.md) | Укажите, где найти файл единицы заголовка ( `.ifc` ) для указанного заголовка. |
+| [`/headerName`](headername.md) | Создание единицы заголовка из указанного заголовка. |
+| [`/reference`](module-reference.md) | Используйте именованный модуль ИФК. |
+| [`/sourceDependencies`](sourcedependencies.md) | Вывод списка всех зависимостей на уровне источника. |
+| [`/sourceDependencies:directives`](sourcedependencies-directives.md) | Перечисление зависимостей модулей и единиц заголовка. |
+| [`/translateInclude`](translateinclude.md) | Рассматривать `#include` как `import` . |
+
 ## <a name="language"></a>Язык
 
 | Параметр | Цель |
@@ -172,7 +184,6 @@ ms.locfileid: "102465383"
 | [`/nologo`](nologo-suppress-startup-banner-c-cpp.md) | Подавление отображения приветствия. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Включает дополнительные функции безопасности и предупреждения. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Отображает список всех включаемых файлов во время компиляции. |
-| [`/sourceDependencies`](sourcedependencies.md) | Список заголовков, модулей и других исходных зависимостей. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает исходный файл на языке C. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает все исходные файлы — C. |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает исходный файл на языке C++. |
@@ -210,7 +221,7 @@ ms.locfileid: "102465383"
 | Параметр | Цель |
 |--|--|
 | [`/experimental:module`](experimental-module.md) | Включает экспериментальную поддержку модулей. |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | Не рекомендуется. Включает экспериментальную поддержку поддержки препроцессора. Использует [`/Zc:preprocessor`](zc-preprocessor.md) |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | Не рекомендуется. Включает экспериментальную поддержку поддержки препроцессора. Используйте [`/Zc:preprocessor`](zc-preprocessor.md). |
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Нерекомендуемые и удаленные параметры компилятора
 

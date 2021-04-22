@@ -41,12 +41,12 @@ helpviewer_keywords:
 - C4767
 - C4770
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 9290f01d24e628ead4649c28ecbfacfec0803591
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4533838f099fbbc3fc4e46ec523ac928ba531e46
+ms.sourcegitcommit: 6d2a4ab362b657d17ce1cb336b22b5454dc2bc7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97198002"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107721203"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Предупреждения компилятора с C4600 по C4799
 
@@ -142,6 +142,7 @@ ms.locfileid: "97198002"
 |[Предупреждение компилятора (уровень 1, ошибка) C4694](../../error-messages/compiler-warnings/compiler-warning-c4694.md)|"класс": запечатанный абстрактный класс не может иметь базовый класс "base_class"|
 |Предупреждение компилятора (уровень 1) C4695|#pragma execution_character_set: "кодировка" не является поддерживаемым аргументом: в настоящее время поддерживается только "UTF-8"|
 |Предупреждение компилятора (уровень 1) C4696|Параметр/ZBvalue1 выходит за пределы допустимого диапазона; предполагается "значение2"|
+| [Предупреждение компилятора (уровень 3) C4698](../../error-messages/compiler-warnings/c4698.md) | "*функция*" предназначена только для ознакомительных целей и может быть изменена или удалена в будущих обновлениях. |
 |[Предупреждение компилятора (уровни 1 и 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|использована неинициализированная локальная переменная "имя"|
 |[Предупреждение компилятора (уровень 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)|использована потенциально неинициализированная локальная переменная "имя"|
 |[Предупреждение компилятора (уровень 4) C4702](../../error-messages/compiler-warnings/compiler-warning-level-4-c4702.md)|недостижимый код|
@@ -199,7 +200,7 @@ ms.locfileid: "97198002"
 |[Предупреждение компилятора (уровень 1) C4788](../../error-messages/compiler-warnings/compiler-warning-level-1-c4788.md)|"идентификатор": идентификатор был усечен до "числа" символов|
 |[Предупреждение компилятора (уровень 1) C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|буфер identifier размером N байт будет переполнен; M байт будет записано начиная с позиции L|
 |Предупреждение компилятора (уровень 2) C4792|Функция "% s" объявлена с помощью sysimport и указана ссылка из машинного кода; Библиотека импорта, необходимая для связи|
-|[Предупреждение компилятора (уровни 1 и 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|"функция": функция скомпилирована как собственная: \ н\т "Reason"|
+|[Предупреждение компилятора (уровни 1 и 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|"функция": функция скомпилирована как собственная: "Reason"|
 |[Предупреждение компилятора (уровень 1) C4794](compiler-warning-level-1-c4794.md)|сегмент переменной локального хранилища потока "% s" изменен с "% s" на "% s"|
 |[Предупреждение компилятора (уровень 1) C4799](../../error-messages/compiler-warnings/compiler-warning-level-1-c4799.md)|в функции "Function" отсутствует инструкция EMMS|
 

@@ -32,14 +32,14 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 973bda9cb769eff339a02cbc43838e8c94516408
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8f809c4cf10c57e86f207090bd86cdbfeb31f226
+ms.sourcegitcommit: 6d2a4ab362b657d17ce1cb336b22b5454dc2bc7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97154049"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107721541"
 ---
-# <a name="shared_ptr-class"></a>Класс shared_ptr
+# <a name="shared_ptr-class"></a>Класс `shared_ptr`
 
 Помещает объект с динамическим выделением памяти в оболочку интеллектуального указателя с подсчитанными ссылками.
 
@@ -82,9 +82,9 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 - если он был создан из объекта `shared_ptr`, владеющего этим ресурсом;
 
-- Если он был создан из объекта [weak_ptr](weak-ptr-class.md) , указывающего на этот ресурс, или
+- Если он был создан из [`weak_ptr`](weak-ptr-class.md) объекта, указывающего на этот ресурс, или
 
-- если владение этим ресурсом было передано ему помощью оператора [shared_ptr::operator=](#op_eq) или путем вызова функции-члена [shared_ptr::reset](#reset)
+- значение, если владение этим ресурсом было назначено с помощью [`shared_ptr::operator=`](#op_eq) или путем вызова функции члена [`shared_ptr::reset`](#reset) .
 
 Владеющие ресурсом объекты `shared_ptr` совместно используют один блок управления. Блок управления содержит следующее:
 
@@ -131,25 +131,25 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 |Имя|Описание|
 |-|-|
 | **Конструкторы** | |
-|[shared_ptr](#shared_ptr)|Создает документ `shared_ptr`.|
-|[~ shared_ptr](#dtorshared_ptr)|Удаляет `shared_ptr`.|
+|[`shared_ptr`](#shared_ptr)|Создает документ `shared_ptr`.|
+|[`~shared_ptr`](#dtorshared_ptr)|Удаляет `shared_ptr`.|
 | **Определения типов** | |
-|[element_type](#element_type)|Тип элемента.|
-|[weak_type](#weak_type)|Тип слабого указателя на элемент.|
+|[`element_type`](#element_type)|Тип элемента.|
+|[`weak_type`](#weak_type)|Тип слабого указателя на элемент.|
 | **Функции элементов** | |
-|[get](#get)|Возвращает адрес принадлежащего ресурса.|
-|[owner_before](#owner_before)|Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.|
-|[reset](#reset)|Заменяет принадлежащий ресурс.|
-|[позиции](#swap)|Меняет местами два объекта `shared_ptr`.|
-|[unique](#unique)|Проверяет, является ли принадлежащий ресурс уникальным.|
-|[use_count](#use_count)|Подсчитывает количество владельцев ресурса.|
+|[`get`](#get)|Возвращает адрес принадлежащего ресурса.|
+|[`owner_before`](#owner_before)|Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.|
+|[`reset`](#reset)|Заменяет принадлежащий ресурс.|
+|[`swap`](#swap)|Меняет местами два объекта `shared_ptr`.|
+|[`unique`](#unique)|Проверяет, является ли принадлежащий ресурс уникальным.|
+|[`use_count`](#use_count)|Подсчитывает количество владельцев ресурса.|
 | **Операторы** | |
-|[bool, оператор](#op_bool)|Проверяет существование принадлежащего ресурса.|
-|[станции](#op_star)|Возвращает указанное значение.|
-|[Оператор =](#op_eq)|Заменяет принадлежащий ресурс.|
-|[станции&gt;](#op_arrow)|Получает указатель на указанное значение.|
+|[`operator bool`](#op_bool)|Проверяет существование принадлежащего ресурса.|
+|[`operator*`](#op_star)|Возвращает указанное значение.|
+|[`operator=`](#op_eq)|Заменяет принадлежащий ресурс.|
+|[`operator->`](#op_arrow)|Получает указатель на указанное значение.|
 
-## <a name="element_type"></a><a name="element_type"></a> element_type
+## <a name="element_type"></a><a name="element_type"></a> `element_type`
 
 Тип элемента.
 
@@ -158,7 +158,7 @@ typedef T element_type;                  // before C++17
 using element_type = remove_extent_t<T>; // C++17
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 `element_type`Тип является синонимом для параметра-шаблона `T` .
 
@@ -185,7 +185,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a><a name="get"></a> Получить
+## <a name="get"></a><a name="get"></a> `get`
 
 Возвращает адрес принадлежащего ресурса.
 
@@ -193,7 +193,7 @@ int main()
 element_type* get() const noexcept;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Функция-член возвращает адрес контролируемого ресурса. Если объект не владеет ресурсом, он возвращает 0.
 
@@ -223,7 +223,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a> bool, оператор
+## <a name="operator-bool"></a><a name="op_bool"></a> `operator bool`
 
 Проверяет существование принадлежащего ресурса.
 
@@ -231,7 +231,7 @@ sp0.get() == 0 == true
 explicit operator bool() const noexcept;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Оператор возвращает значение **`true`** `get() != nullptr` , если, в противном случае **`false`** .
 
@@ -262,7 +262,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_star"></a> станции
+## <a name="operator"></a><a name="op_star"></a> `operator*`
 
 Возвращает указанное значение.
 
@@ -270,7 +270,7 @@ int main()
 T& operator*() const noexcept;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Оператор косвенного обращения возвращает `*get()`. Следовательно, сохраненный указатель не должен быть пустым.
 
@@ -296,7 +296,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="operator"></a><a name="op_eq"></a> Оператор =
+## <a name="operator"></a><a name="op_eq"></a> `operator=`
 
 Заменяет принадлежащий ресурс.
 
@@ -320,22 +320,22 @@ shared_ptr& operator=(unique_ptr<Other, Deleter>&& up);
 
 ### <a name="parameters"></a>Параметры
 
-*портов*\
+*`sp`*\
 Общий указатель для копирования или перемещения.
 
-*профиля*\
+*`ap`*\
 Автоматический указатель для перемещения. `auto_ptr`Перегрузка является устаревшей в c++ 11 и удалена в c++ 17.
 
-*крывающемся*\
-Уникальный указатель на объект, для которого необходимо принять владение. не *владеет объектом* после вызова.
+*`up`*\
+Уникальный указатель на объект, для которого необходимо принять владение. *`up`* не владеет объектом после вызова.
 
-*Иной*\
-Тип объекта, на который указывает *SP*, *AP* или *up*.
+*`Other`*\
+Тип объекта, на который указывает *`sp`* , *`ap`* или *`up`* .
 
-*Метод удаления*\
+*`Deleter`*\
 Тип удаления принадлежащего объекта, который сохраняется для последующего удаления объекта.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Все операторы уменьшают счетчик ссылок для ресурса, который в настоящее время принадлежит, **`*this`** и назначает владение ресурсом с именем, указанным в последовательности операндов **`*this`** . Если число ссылок на ресурс становится равным нулю, ресурс освобождается (delete). Если оператор завершается с ошибкой, он остается **`*this`** неизменным.
 
@@ -368,7 +368,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="operator-"></a><a name="op_arrow"></a> Оператор->
+## <a name="operator-"></a><a name="op_arrow"></a> `operator->`
 
 Получает указатель на указанное значение.
 
@@ -376,7 +376,7 @@ int main()
 T* operator->() const noexcept;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Оператор выбора возвращает `get()`, так что выражение `sp->member` ведет себя так же, как `(sp.get())->member`, где `sp` — это объект класса `shared_ptr<T>`. Следовательно, сохраненный указатель не должен быть пустым, и `T` должен быть классом, структурой или типом объединения с членом `member`.
 
@@ -405,7 +405,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a> owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> `owner_before`
 
 Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.
 
@@ -419,14 +419,14 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*указатель*\
+*`ptr`*\
 Ссылка lvalue на `shared_ptr` или `weak_ptr` .
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Функция-член шаблона возвращает значение true **`*this`** , если упорядочено до `ptr` .
 
-## <a name="reset"></a><a name="reset"></a> перезапуск
+## <a name="reset"></a><a name="reset"></a> `reset`
 
 Заменяет принадлежащий ресурс.
 
@@ -450,25 +450,25 @@ void reset(
 
 ### <a name="parameters"></a>Параметры
 
-*Иной*\
+*`Other`*\
 Тип, управляемый указателем аргумента.
 
-*Метод удаления*\
+*`Deleter`*\
 Тип метода удаления.
 
-*указатель*\
+*`ptr`*\
 Копируемый указатель.
 
-*метод удаления*\
+*`deleter`*\
 Метод удаления для копирования.
 
-*Выделен*\
+*`Allocator`*\
 Тип распределителя.
 
-*Идентификатор*\
+*`alloc`*\
 Распределитель для копирования.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Все операторы уменьшают счетчик ссылок для ресурса, который в настоящее время принадлежит, **`*this`** и назначает владение ресурсом с именем, указанным в последовательности операндов **`*this`** . Если число ссылок на ресурс становится равным нулю, ресурс освобождается (delete). Если оператор завершается с ошибкой, он остается **`*this`** неизменным.
 
@@ -518,7 +518,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a><a name="shared_ptr"></a> shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a> `shared_ptr`
 
 Создает документ `shared_ptr`.
 
@@ -593,36 +593,36 @@ shared_ptr(
 
 ### <a name="parameters"></a>Параметры
 
-*Иной*\
+*`Other`*\
 Тип, управляемый указателем аргумента.
 
-*указатель*\
+*`ptr`*\
 Копируемый указатель.
 
-*Метод удаления*\
+*`Deleter`*\
 Тип метода удаления.
 
-*Выделен*\
+*`Allocator`*\
 Тип распределителя.
 
-*метод удаления*\
+*`deleter`*\
 Метод удаления.
 
-*Идентификатор*\
+*`alloc`*\
 Распределитель.
 
-*портов*\
+*`sp`*\
 Интеллектуальный указатель для копирования
 
-*ВЧ*\
+*`wp`*\
 Слабый указатель.
 
-*профиля*\
+*`ap`*\
 "Автоматический" указатель ( auto_ptr ) для копирования
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
-Каждый из конструкторов создает объект для контроля над ресурсом, указанным в качестве операнда. Конструктор `shared_ptr(const weak_ptr<Other>& wp)` создает объект исключения типа [bad_weak_ptr](bad-weak-ptr-class.md) если `wp.expired()` .
+Каждый из конструкторов создает объект для контроля над ресурсом, указанным в качестве операнда. Конструктор `shared_ptr(const weak_ptr<Other>& wp)` создает объект исключения типа [`bad_weak_ptr`](bad-weak-ptr-class.md) if `wp.expired()` .
 
 ### <a name="example"></a>Пример
 
@@ -676,7 +676,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a> ~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a> `~shared_ptr`
 
 Удаляет `shared_ptr`.
 
@@ -684,7 +684,7 @@ int main()
 ~shared_ptr();
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Деструктор уменьшает счетчик ссылок для ресурса, который в настоящее время принадлежит **`*this`** . Если число ссылок на ресурс становится равным нулю, ресурс освобождается (delete).
 
@@ -723,7 +723,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a><a name="swap"></a> позиции
+## <a name="swap"></a><a name="swap"></a> `swap`
 
 Меняет местами два объекта `shared_ptr`.
 
@@ -733,12 +733,12 @@ void swap(shared_ptr& sp) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*портов*\
+*`sp`*\
 Разделяемый указатель (shared_ptr), с которым требуется произвести обмен контролируемыми объектами.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
-Функция члена оставляет ресурс, изначально принадлежащий, владельцем **`*this`** , а затем ресурс, изначально принадлежащий *SP* , в дальнейшем принадлежит **`*this`** . Функция не изменяет подсчет ссылок для двух ресурсов и не создает исключений.
+Функция члена оставляет ресурс, изначально принадлежащий, владельцем ресурса **`*this`** *`sp`* , а затем ресурс, изначально принадлежащий *`sp`* **`*this`** . Функция не изменяет подсчет ссылок для двух ресурсов и не создает исключений.
 
 ### <a name="example"></a>Пример
 
@@ -784,7 +784,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a><a name="unique"></a> однозначно
+## <a name="unique"></a><a name="unique"></a> `unique`
 
 Проверяет, является ли принадлежащий ресурс уникальным. Эта функция была признана устаревшей в C++ 17 и удалена в C++ 20.
 
@@ -792,7 +792,7 @@ int main()
 bool unique() const noexcept;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Функция-член возвращает **`true`** , если другой `shared_ptr` объект не владеет ресурсом, владельцем которого является **`*this`** , в противном случае — **`false`** .
 
@@ -823,7 +823,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a><a name="use_count"></a> use_count
+## <a name="use_count"></a><a name="use_count"></a> `use_count`
 
 Подсчитывает количество владельцев ресурса.
 
@@ -831,7 +831,7 @@ sp1.unique() == false
 long use_count() const noexcept;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Функция-член возвращает количество `shared_ptr` объектов, владеющих ресурсом, владельцем которого является **`*this`** .
 
@@ -862,7 +862,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a><a name="weak_type"></a> weak_type
+## <a name="weak_type"></a><a name="weak_type"></a> `weak_type`
 
 Тип слабого указателя на элемент.
 
@@ -870,13 +870,13 @@ sp1.use_count() == 2
 using weak_type = weak_ptr<T>; // C++17
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 `weak_type`Определение Добавлено в c++ 17.
 
 ## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](cpp-standard-library-header-files.md)\
-[\<memory>](memory.md)\
-[unique_ptr](unique-ptr-class.md)\
-[weak_ptr - класс](weak-ptr-class.md)
+[`<memory>`](memory.md)\
+[`unique_ptr`](unique-ptr-class.md)\
+[Класс `weak_ptr`](weak-ptr-class.md)

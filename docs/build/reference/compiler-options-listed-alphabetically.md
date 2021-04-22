@@ -1,15 +1,15 @@
 ---
 title: Параметры компилятора в алфавитном порядке
 description: Справочный список в алфавитном порядке параметров командной строки компилятора Microsoft C/C++.
-ms.date: 07/29/2020
+ms.date: 04/13/2021
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: de83cd5e2d649b88de4e21f3d828f68504705dc2
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: 78366537d0ff0599951d4ba528cfae2bdcc2c3e0
+ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465370"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107381224"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Параметры компилятора в алфавитном порядке
 
@@ -40,7 +40,8 @@ ms.locfileid: "102465370"
 | [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Не рекомендуется. Отчеты об ошибках контролируются параметрами [отчеты об ошибках Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | Задайте кодировку выполнения. |
 | [`/experimental:module`](experimental-module.md) | Включает экспериментальную поддержку модулей. |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | Не рекомендуется. Включает экспериментальную поддержку поддержки препроцессора. Использует [`/Zc:preprocessor`](zc-preprocessor.md) |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | Не рекомендуется. Включает экспериментальную поддержку поддержки препроцессора. Используйте [`/Zc:preprocessor`](zc-preprocessor.md). |
+| [`/exportHeader`](module-exportheader.md) | Создайте файлы заголовков ( *`.ifc`* ), заданные входными аргументами. |
 | [`/F`](f-set-stack-size.md) | Задает размер стека. |
 | [`/favor`](favor-optimize-for-architecture-specifics.md) | Создает код, оптимизированный для конкретной архитектуры x64. Или для конкретных микроархитектур в архитектурах AMD64 и EM64T. |
 | [`/FA`](fa-fa-listing-file.md) | Создает файл листинга. |
@@ -81,6 +82,8 @@ ms.locfileid: "102465370"
 | [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Не рекомендуется. Эквивалентно [`/RTC1`](rtc-run-time-error-checks.md) . |
 | [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Использует **`__stdcall`** соглашение о вызовах (только x86). |
 | [`/H`](h-restrict-length-of-external-names.md) | Не рекомендуется. Ограничивает длину внешних (открытых) имен. |
+| [`/headerName`](headername.md) | Создание единицы заголовка из указанного заголовка. |
+| [`/headerUnit`](headerunit.md) | Укажите, где найти файл единицы заголовка ( `.ifc` ) для указанного заголовка. |
 | [`/HELP`](help-compiler-command-line-help.md) | Отображает список параметров компилятора. |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | Принудительная запись параметров, переданных в регистрах, в соответствующие места в стеке при вхождении в функцию. Этот параметр компилятора предназначен только для компиляторов x64 (собственная и перекрестная компиляция). |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | Создает образ с возможностью исправления. |
@@ -121,16 +124,19 @@ ms.locfileid: "102465370"
 | [`/Qspectre-load`](qspectre-load.md) | Указывает создание компилятором инструкций сериализации для устранения уязвимостей системы безопасности устранением рисков Spectre, основанных на инструкциях по загрузке. |
 | [`/Qspectre-load-cf`](qspectre-load-cf.md) | Указывает создание компилятором инструкций сериализации для устранения уязвимостей системы безопасности устранением рисков Spectre, основанных на инструкциях потока управления, которые загружают память. |
 | [`/Qvec-report` (Auto-векторизатора Report Level)](qvec-report-auto-vectorizer-reporting-level.md) | Включает уровни отчетов для автоматической векторизации. |
+| [`/reference`](module-reference.md) | Используйте именованный модуль ИФК. |
 | [`/RTC`](rtc-run-time-error-checks.md) | Включает проверку ошибок во время выполнения. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Включает дополнительные функции безопасности и предупреждения. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Отображает список включаемых файлов во время компиляции. |
 | [`/source-charset`](source-charset-set-source-character-set.md) | Задать исходную кодировку. |
-| [`/sourceDependencies`](sourcedependencies.md) | Список заголовков, модулей и других исходных зависимостей. |
+| [`/sourceDependencies`](sourcedependencies.md) | Вывод списка всех зависимостей на уровне источника. |
+| [`/sourceDependencies:directives`](sourcedependencies-directives.md) |Перечисление зависимостей модулей и единиц заголовка. |
 | [`/std`](std-specify-language-standard-version.md) | Селектор совместимости версии C++ Standard. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает исходный файл на языке C. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает все исходные файлы — C. |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает исходный файл на языке C++. |
 | [`/TP`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает, что все исходные файлы имеют язык C++. |
+| [`/translateInclude`](translateinclude.md) | Рассматривать `#include` как `import` . |
 | [`/U`](u-u-undefine-symbols.md) | Удаляет предварительно определенный макрос. |
 | [`/u`](u-u-undefine-symbols.md) | Удаляет все предварительно определенные макросы. |
 | [`/utf-8`](utf-8-set-source-and-executable-character-sets-to-utf-8.md) | Задайте кодировку UTF-8 для исходного кода и кодировки выполнения. |

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 8e337cc0f66a4a281de07ba3839895096e8021d0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 437e59058226f274962dedcda52b973eee4ea1ba
+ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97222129"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107577278"
 ---
 # <a name="cdbexception-class"></a>Класс Кдбексцептион
 
@@ -40,7 +40,7 @@ class CDBException : public CException
 |[Кдбексцептион:: m_strError](#m_strerror)|Содержит строку, описывающую ошибку в буквенно-цифровых терминах.|
 |[Кдбексцептион:: m_strStateNativeOrigin](#m_strstatenativeorigin)|Содержит строку, описывающую ошибку в терминах кодов ошибок, возвращаемых ODBC.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 
 Класс включает два общедоступных члена данных, которые можно использовать для определения причины исключения или для вывода текстового сообщения с описанием исключения. `CDBException` объекты создаются и создаются функциями членов классов базы данных.
 
@@ -69,7 +69,7 @@ class CDBException : public CException
 
 Содержит код ошибки ODBC типа РЕТКОДЕ, возвращаемый функцией интерфейса прикладного программирования (API) ODBC.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Этот тип включает в себя коды с префиксами SQL, определенные в ODBC и AFX_SQL с префиксами, определенными классами базы данных. Для `CDBException` этот элемент будет содержать одно из следующих значений:
 
@@ -121,7 +121,7 @@ class CDBException : public CException
 
 Содержит строку, описывающую ошибку, вызвавшую исключение.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Строка описывает ошибку в буквенно-цифровых терминах. Более подробные сведения и пример см. в разделе `m_strStateNativeOrigin` .
 
@@ -129,7 +129,7 @@ class CDBException : public CException
 
 Содержит строку, описывающую ошибку, вызвавшую исключение.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Замечания
 
 Строка имеет вид "состояние:% s, native:% LD, источник:% s", где коды формата заменяются значениями, описывающими:
 

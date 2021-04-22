@@ -61,6 +61,10 @@
       href: ../build/clang-support-cmake.md
     - name: Настройка проекта Linux CMake
       href: ../build/../linux/cmake-linux-project.md
+    - name: Настройка и сборка с помощью предустановок CMake
+      href: ../build/cmake-presets-vs.md
+    - name: Справка по CMakePresets.json
+      href: ../build/cmake-presets-json-reference.md
     - name: Настройка параметров сборки CMake
       href: ../build/customize-cmake-settings.md
     - name: Настройка сеансов отладки CMake
@@ -84,6 +88,13 @@
       href: ../build/vcpkg-command-line-reference.md
 - name: Аналитика сборки C++
   href: ../build-insights/get-started-with-cpp-build-insights.md
+- name: Сборка и импорт блоков заголовков
+  expanded: false
+  items:
+    - name: Пошаговое руководство. Сборка и импорт блоков заголовков в проектах Visual C++
+      href: ../build/walkthrough-header-units.md
+    - name: Пошаговое руководство. Импорт библиотек STL в качестве блоков заголовков
+      href: ../build/walkthrough-import-stl-header-units.md
 - name: Файлы предкомпилированных заголовков
   href: ../build/creating-precompiled-header-files.md
 - name: Сборки выпуска C++
@@ -602,6 +613,8 @@
                   href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
                 - name: /H (ограничение длины внешних имен)
                   href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /headerName (сборка блока заголовка из указанного заголовка)
+                  href: ../build/reference/headername.md
                 - name: /headerUnit (использование IFC для единицы заголовка)
                   href: ../build/reference/headerunit.md
                 - name: /HELP (файл справки по компилятору командной строки)
@@ -624,9 +637,9 @@
                   href: ../build/reference/ln-create-msil-module.md
                 - name: '/MD, /MT, /LD (использование библиотеки времени выполнения)'
                   href: ../build/reference/md-mt-ld-use-run-time-library.md
-                - name: '/module:exportHeader (создание единиц заголовка)'
+                - name: /exportHeader (создание блоков заголовков)
                   href: ../build/reference/module-exportheader.md
-                - name: '/module:reference (использование IFC для именованного модуля)'
+                - name: /reference (использование IFC для именованного модуля)
                   href: ../build/reference/module-reference.md
                 - name: /MP (сборка с несколькими процессами)
                   href: ../build/reference/mp-build-with-multiple-processes.md
@@ -694,8 +707,10 @@
                   href: ../build/reference/showincludes-list-include-files.md
                 - name: /source-charset (задание исходной кодировки)
                   href: ../build/reference/source-charset-set-source-character-set.md
-                - name: /sourceDependencies (отчет о зависимостях на уровне источника)
+                - name: /sourceDependencies (список зависимостей на уровне источника)
                   href: ../build/reference/sourcedependencies.md
+                - name: '/sourceDependencies:directives (список зависимостей модулей и блоков заголовков)'
+                  href: ../build/reference/sourcedependencies-directives.md
                 - name: /std (определение стандартной версии языка)
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: '/Tc, /Tp, /TC, /TP (определение типа исходного файла)'

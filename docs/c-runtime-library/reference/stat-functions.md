@@ -119,12 +119,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: c0aa9c825821608aaf7f71bc9e3d8331efea8a82
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 572e1d5f2f1c4eadf5f78c696c78630b84b90791
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97171261"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099226"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -241,7 +241,7 @@ int _wstat64i32(
 
 Структура **_stat** , определенная в сис\стат. H включает следующие поля.
 
-|Поле||
+|Поле|Описание|
 |-|-|
 | **st_gid** | Числовой идентификатор группы, которой принадлежит файл (только для UNIX). В системах Windows это поле всегда равно нулю. Перенаправленный файл классифицируется как файл Windows. |
 | **st_atime** | Время последнего доступа к файлу. Действительно на дисках, отформатированных в файловой системе NTFS, но не в FAT. |

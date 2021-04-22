@@ -1,7 +1,7 @@
 ---
 title: float_control pragma
 description: Описывает использование и эффекты pragma директивы float_control. Директива float_control управляет состоянием точной семантики с плавающей точкой и семантикой исключений во время выполнения.
-ms.date: 01/22/2021
+ms.date: 04/15/2021
 f1_keywords:
 - vc-pragma.float_control
 - float_control_CPP
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - pragma, float_control
 no-loc:
 - pragma
-ms.openlocfilehash: 98695c15424395a9b4e008a5cb1133824e1e7054
-ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
+ms.openlocfilehash: b7a02acf729d04527300454fed6e74e7d06bbfe9
+ms.sourcegitcommit: d531c567c268b676b44abbc8416ba7e20d22044b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98712769"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107539768"
 ---
-# <a name="float_control-no-locpragma"></a>`float_control` pragma
+# <a name="float_control-pragma"></a>`float_control` pragma
 
 Указывает поведение чисел с плавающей запятой для функции.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **`#pragma float_control`**\
-> **`#pragma float_control( precise,`** { **`on`** | **`off`** } [ **`, push`** ] **`)`**\
-> **`#pragma float_control( except,`** { **`on`** | **`off`** } [ **`, push`** ] **`)`**\
-> **`#pragma float_control(`** { **`push`** | **`pop`** } **`)`**
+> **`#pragma float_control( precise,`** { **`on`** &vert; **`off`** } [ **`, push`** ] **`)`**\
+> **`#pragma float_control( except,`** { **`on`** &vert; **`off`** } [ **`, push`** ] **`)`**\
+> **`#pragma float_control(`** { **`push`** &vert; **`pop`** } **`)`**
 
-## <a name="options"></a>Параметры
+## <a name="options"></a>Варианты
 
 **`precise`**, **`on`** | **`off`**, **`push`**\
 Указывает, следует ли включать ( **`on`** ) или отключать ( **`off`** ) точную семантику с плавающей запятой. Сведения о различиях с **`/fp:precise`** параметром компилятора см. в разделе "Примечания". Необязательный **`push`** маркер отправляет текущее значение для **`float_control`** во внутреннем стеке компилятора.
@@ -44,7 +44,7 @@ ms.locfileid: "98712769"
 **`pop`**\
 Удаляет **`float_control`** параметр из верхнего внутреннего стека компилятора и создает новый **`float_control`** параметр.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 **`float_control`** pragma Не имеет того же поведения, что и [`/fp`](../build/reference/fp-specify-floating-point-behavior.md) параметр компилятора. **`float_control`** pragma Компонент управляет только частью поведения операций с плавающей запятой. Его необходимо сочетать с [`fp_contract`](../preprocessor/fp-contract.md) [`fenv_access`](../preprocessor/fenv-access.md) pragma директивами и для повторного создания **`/fp`** параметров компилятора. В следующей таблице приведены эквивалентные pragma параметры для каждого параметра компилятора.
 

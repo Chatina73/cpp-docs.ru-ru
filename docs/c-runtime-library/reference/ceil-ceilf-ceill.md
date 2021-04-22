@@ -36,12 +36,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 3079f52c79d6d888923025357bb21adc782aa5cd
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 67c3f930208a89697ef4efe72630c047cf3796c4
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555247"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099616"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -83,7 +83,7 @@ long double ceill(
 
 **ceil** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ceil** , которые принимают **`float`** **`long double`** типы или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **ceil** всегда принимает и возвращает **`double`** .
 
@@ -95,8 +95,8 @@ long double ceill(
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**ceil**, **ceilf**, **цеилл**|\<math.h>|
-|макрос **ceil** | \<tgmath.h> ||
+| **ceil**, **ceilf**, **цеилл**| \<math.h> |
+| макрос **ceil** | \<tgmath.h> |
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -104,7 +104,7 @@ long double ceill(
 
 См. пример для [floor](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>Дополнительно
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

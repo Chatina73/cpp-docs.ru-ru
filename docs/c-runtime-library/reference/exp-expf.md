@@ -36,12 +36,12 @@ helpviewer_keywords:
 - expl function
 - calculating exponentials
 - exp function
-ms.openlocfilehash: ac51744fe332fbf378139df11e7d07afe44029ca
-ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
+ms.openlocfilehash: 20a22600d068569468b764ff07519d4292afbfea
+ms.sourcegitcommit: 83a396e9491fd6bdecfb48ff225ef01c959829a6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98564008"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107577209"
 ---
 # <a name="exp-expf-expl"></a>`exp`, `expf`, `expl`
 
@@ -79,14 +79,14 @@ long double expl(
 
 |Входные данные|Исключение SEH|`Matherr` об|
 |-----------|-------------------|-----------------------|
-|± Скрытого NaN, неопределенного|Нет|`_DOMAIN`|
+|± Скрытого NaN, неопределенного|None|`_DOMAIN`|
 |± Бесконечности|`INVALID`|`_DOMAIN`|
 |x ≥ 7.097827e+002|`INEXACT+OVERFLOW`|`OVERFLOW`|
 |X ≤ -7.083964e+002|`INEXACT+UNDERFLOW`|`UNDERFLOW`|
 
 **`exp`** Функция имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). [`_set_SSE2_enable`](set-sse2-enable.md)Сведения и ограничения по использованию реализации SSE2 см. в разделе.
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 
 C++ допускает перегрузку, поэтому можно вызывать перегрузки **`exp`** , принимающие **`float`** аргумент или **`long double`** . В программе на языке C, если только вы не используете `<tgmath.h>` макрос для вызова этой функции, **`exp`** всегда принимает и возвращает **`double`** .
 
@@ -124,8 +124,8 @@ int main( void )
 exp( 2.302585 ) = 10.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)\
-[н`og, logf, log10, log10f`](log-logf-log10-log10f.md)\
+[`log, logf, log10, log10f`](log-logf-log10-log10f.md)\
 [`_CIexp`](../../c-runtime-library/ciexp.md)

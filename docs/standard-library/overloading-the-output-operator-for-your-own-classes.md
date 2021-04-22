@@ -6,14 +6,14 @@ helpviewer_keywords:
 - operator<<, overloading for your own classes
 - operator <<, overloading for your own classes
 ms.assetid: ad1d2c49-d84e-48a8-9c09-121f28b10bf0
-ms.openlocfilehash: 206d6ccb50c7cb3706c66adeb6c1429a04775fc1
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 10b5191c291676319ff461932e595811744a384d
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97340844"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099213"
 ---
-# <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>Перегрузка оператора &lt;&lt; для собственных классов
+# <a name="overloading-the--operator-for-your-own-classes"></a>Перегрузка оператора `<<` для собственных классов
 
 Потоки ввода используют оператор вставки (`<<`) для стандартных типов. Оператор `<<` для собственных классов можно перегрузить.
 

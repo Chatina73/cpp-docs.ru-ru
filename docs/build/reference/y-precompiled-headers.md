@@ -1,30 +1,29 @@
 ---
 description: Дополнительные сведения о:/Y (предкомпилированные заголовки)
-title: /Y (Предкомпилированные заголовки)
+title: /Y (предварительно скомпилированные заголовки)
 ms.date: 11/04/2016
 f1_keywords:
 - /Y
 helpviewer_keywords:
 - /Y compiler options [C++]
-ms.assetid: 1df5726a-8ebe-42c3-b618-d2f5e1ce8673
-ms.openlocfilehash: d8178047915118544e61618c19476a558a05bfc5
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 5b10056fe252460c63e8ac28c5e5a573fd67f8d9
+ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97243670"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107381289"
 ---
-# <a name="y-precompiled-headers"></a>/Y (Предкомпилированные заголовки)
+# <a name="y-precompiled-headers"></a>/Y (предварительно скомпилированные заголовки)
 
 Следующие параметры компилятора влияют на создание и использование предкомпилированных заголовков:
 
-- [/Y-(игнорирование параметров предкомпилированного заголовка)](y-ignore-precompiled-header-options.md)
+- [/Y- (пропуск параметров предкомпилированного заголовка)](y-ignore-precompiled-header-options.md)
 
-- [/Yc (создание файла предкомпилированного заголовка)](yc-create-precompiled-header-file.md)
+- [/Yc (создание предкомпилированного файла заголовка)](yc-create-precompiled-header-file.md)
 
 - [/YD выводить (размещение отладочной информации в объектном файле)](yd-place-debug-information-in-object-file.md)
 
-- [/Yl (Вставка ссылки на PCH для библиотеки отладки)](yl-inject-pch-reference-for-debug-library.md)
+- [/Yl (вставка ссылки на файл PCH для библиотеки отладки)](yl-inject-pch-reference-for-debug-library.md)
 
 - [/Yu (использование файла предкомпилированного заголовка)](yu-use-precompiled-header-file.md)
 
@@ -32,5 +31,5 @@ ms.locfileid: "97243670"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис Command-Line компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)
+[Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)\
+[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)
